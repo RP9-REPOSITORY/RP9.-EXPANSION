@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 38px Arial,sans-serif;fill:#0f172a}.sub{font:20px Arial,sans-serif;fill:#475569}.h{font:700 22px Arial,sans-serif;fill:#0f172a}.t{font:18px Arial,sans-serif;fill:#1e293b}.small{font:16px Arial,sans-serif;fill:#475569}.math{font:700 24px Arial,sans-serif;fill:#0f172a}.line{stroke:#334155;stroke-width:3;fill:none}.thin{stroke:#94a3b8;stroke-width:2;fill:none}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 8;fill:none}.q1{fill:#5eead4}.q2{fill:#60a5fa}.q3{fill:#fbbf24}.q4{fill:#fb7185}.panel{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.white{fill:#fff}.center{fill:#7c3aed}.r{stroke:#7c3aed;stroke-width:5}.dim{stroke:#334155;stroke-width:2;marker-start:url(#arrow);marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="1100" fill="#ffffff"/>
+  <text x="800" y="58" text-anchor="middle" class="title">5A. Rx8 RELATIONAL REFERENCE FIELD</text>
+  <text x="800" y="92" text-anchor="middle" class="sub">One invariant radius → one circle → one minimal square → one complete 8R enclosure</text>
+
+  <rect x="70" y="135" width="920" height="730" rx="18" class="panel"/>
+  <text x="530" y="180" text-anchor="middle" class="h">GEOMETRICAL ORIGIN</text>
+  <!-- minimal square and circle -->
+  <rect x="245" y="245" width="570" height="570" class="white" stroke="#0f172a" stroke-width="7"/>
+  <circle cx="530" cy="530" r="285" fill="#e0f2fe" fill-opacity=".48" stroke="#0284c7" stroke-width="7"/>
+  <!-- quarter fields -->
+  <path d="M530 530 L530 245 A285 285 0 0 1 815 530 Z" class="q1" opacity=".28"/>
+  <path d="M530 530 L815 530 A285 285 0 0 1 530 815 Z" class="q2" opacity=".24"/>
+  <path d="M530 530 L530 815 A285 285 0 0 1 245 530 Z" class="q3" opacity=".26"/>
+  <path d="M530 530 L245 530 A285 285 0 0 1 530 245 Z" class="q4" opacity=".22"/>
+  <line x1="245" y1="530" x2="815" y2="530" class="line"/>
+  <line x1="530" y1="245" x2="530" y2="815" class="line"/>
+  <line x1="530" y1="530" x2="815" y2="530" class="r"/>
+  <circle cx="530" cy="530" r="10" class="center"/>
+  <text x="665" y="510" class="math" fill="#7c3aed">R</text>
+  <text x="530" y="559" text-anchor="middle" class="small">CENTER</text>
+  <!-- diameter -->
+  <line x1="245" y1="850" x2="815" y2="850" class="dim"/>
+  <text x="530" y="888" text-anchor="middle" class="math">DIAMETER = 2R</text>
+  <!-- side labels -->
+  <text x="530" y="228" text-anchor="middle" class="math">2R</text>
+  <text x="530" y="842" text-anchor="middle" class="small">SQUARE SIDE = CIRCLE DIAMETER</text>
+  <text x="220" y="535" text-anchor="middle" class="math" transform="rotate(-90 220 535)">2R</text>
+  <text x="840" y="535" text-anchor="middle" class="math" transform="rotate(90 840 535)">2R</text>
+
+  <!-- declaration panel -->
+  <rect x="1030" y="135" width="500" height="730" rx="18" class="panel"/>
+  <text x="1280" y="180" text-anchor="middle" class="h">Rx8 DECLARATION</text>
+  <text x="1280" y="238" text-anchor="middle" class="math">R</text>
+  <path d="M1280 255 V295" class="line" marker-end="url(#arrow)"/>
+  <text x="1280" y="333" text-anchor="middle" class="math">2R</text>
+  <text x="1280" y="362" text-anchor="middle" class="small">one complete diameter</text>
+  <path d="M1280 380 V420" class="line" marker-end="url(#arrow)"/>
+  <text x="1280" y="458" text-anchor="middle" class="math">4 × 2R</text>
+  <text x="1280" y="487" text-anchor="middle" class="small">four equal square sides</text>
+  <path d="M1280 505 V545" class="line" marker-end="url(#arrow)"/>
+  <rect x="1110" y="568" width="340" height="82" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="4"/>
+  <text x="1280" y="605" text-anchor="middle" class="math">8R = Rx8</text>
+  <text x="1280" y="634" text-anchor="middle" class="small">complete linear enclosure</text>
+  <text x="1280" y="706" text-anchor="middle" class="t">The number 8 is not inserted.</text>
+  <text x="1280" y="738" text-anchor="middle" class="t">It follows from the minimum square:</text>
+  <text x="1280" y="779" text-anchor="middle" class="math">2R + 2R + 2R + 2R</text>
+  <text x="1280" y="816" text-anchor="middle" class="math">= 8R</text>
+
+  <!-- lower relation bar -->
+  <text x="800" y="925" text-anchor="middle" class="h">THE SAME COMPLETE REFERENCE, READ AS FOUR QUARTERS OR EIGHT EIGHTHS</text>
+  <g transform="translate(160 960)">
+    <rect width="160" height="62" class="q1"/><rect x="160" width="160" height="62" class="q1"/>
+    <rect x="320" width="160" height="62" class="q2"/><rect x="480" width="160" height="62" class="q2"/>
+    <rect x="640" width="160" height="62" class="q3"/><rect x="800" width="160" height="62" class="q3"/>
+    <rect x="960" width="160" height="62" class="q4"/><rect x="1120" width="160" height="62" class="q4"/>
+    <rect width="1280" height="62" fill="none" stroke="#0f172a" stroke-width="4"/>
+    <g class="t" text-anchor="middle"><text x="80" y="40">1/8</text><text x="240" y="40">2/8</text><text x="400" y="40">3/8</text><text x="560" y="40">4/8</text><text x="720" y="40">5/8</text><text x="880" y="40">6/8</text><text x="1040" y="40">7/8</text><text x="1200" y="40">8/8</text></g>
+  </g>
+  <text x="800" y="1068" text-anchor="middle" class="sub">RELATION PRECEDES REPRESENTATION · REPRESENTATION DOES NOT REDEFINE RELATION</text>
+</svg>

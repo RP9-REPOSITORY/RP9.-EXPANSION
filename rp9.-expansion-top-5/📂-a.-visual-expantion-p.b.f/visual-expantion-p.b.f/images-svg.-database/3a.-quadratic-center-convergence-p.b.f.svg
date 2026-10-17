@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">3A. Quadratic Center-Convergence P.B.F.</title>
+  <desc id="description">Four stepped diagonal executions move from the four corners of one square toward a shared center. Every branch preserves the X-X-Y positional order. The branches are directional instances of the same P.B.F. function and are not added together.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eaf2fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/>
+      <feOffset in="blur" dx="0" dy="7" result="offsetBlur"/>
+      <feColorMatrix in="offsetBlur" type="matrix" values="0 0 0 0 0.075  0 0 0 0 0.14  0 0 0 0 0.23  0 0 0 0.16 0" result="shadowColor"/>
+      <feMerge>
+        <feMergeNode in="shadowColor"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#244768"/>
+    </marker>
+    <style>
+      .title { font: 700 42px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .subtitle { font: 500 21px Inter, Arial, sans-serif; fill: #49657f; }
+      .corner { font: 700 15px Inter, Arial, sans-serif; fill: #49657f; letter-spacing: 1px; }
+      .node { font: 800 22px Inter, Arial, sans-serif; fill: #ffffff; }
+      .nodeSmall { font: 700 13px Inter, Arial, sans-serif; fill: #ffffff; }
+      .centerMain { font: 800 33px Inter, Arial, sans-serif; fill: #ffffff; }
+      .centerSmall { font: 700 14px Inter, Arial, sans-serif; fill: #ffffff; letter-spacing: 0.8px; }
+      .caption { font: 500 18px Inter, Arial, sans-serif; fill: #314e69; }
+      .small { font: 600 16px Inter, Arial, sans-serif; fill: #49657f; }
+      .formula { font: 800 24px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1.1px; }
+      .boundary { font: 700 16px Inter, Arial, sans-serif; fill: #244768; letter-spacing: 0.35px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect x="55" y="45" width="1490" height="810" rx="30" fill="#ffffff" stroke="#c8d8e8" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="100" y="120" class="title">3A. QUADRATIC CENTER-CONVERGENCE P.B.F.</text>
+  <text x="100" y="160" class="subtitle">Four corners · four stepped diagonal executions · one shared observation center</text>
+  <line x1="100" y1="215" x2="1500" y2="215" stroke="#d8e4ef" stroke-width="2"/>
+
+  <!-- Square field. -->
+  <rect x="570" y="245" width="460" height="420" rx="8" fill="#f7fbff" stroke="#244768" stroke-width="5"/>
+  <line x1="800" y1="245" x2="800" y2="665" stroke="#c9d9e7" stroke-width="2" stroke-dasharray="8 9"/>
+  <line x1="570" y1="455" x2="1030" y2="455" stroke="#c9d9e7" stroke-width="2" stroke-dasharray="8 9"/>
+
+  <text x="545" y="240" text-anchor="end" class="corner">CORNER 1</text>
+  <text x="1055" y="240" class="corner">CORNER 2</text>
+  <text x="545" y="686" text-anchor="end" class="corner">CORNER 3</text>
+  <text x="1055" y="686" class="corner">CORNER 4</text>
+
+  <!-- Stepped diagonal paths from all four corners to the center. -->
+  <path d="M 575 250 H 635 V 310 H 695 V 370 H 750 V 425 H 790 V 455"
+        fill="none" stroke="#244768" stroke-width="8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <path d="M 1025 250 H 965 V 310 H 905 V 370 H 850 V 425 H 810 V 455"
+        fill="none" stroke="#244768" stroke-width="8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <path d="M 575 660 H 635 V 600 H 695 V 540 H 750 V 485 H 790 V 455"
+        fill="none" stroke="#244768" stroke-width="8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <path d="M 1025 660 H 965 V 600 H 905 V 540 H 850 V 485 H 810 V 455"
+        fill="none" stroke="#244768" stroke-width="8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+
+  <!-- Branch 1: top left. -->
+  <g transform="translate(585 260)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(650 325)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(713 388)">
+    <rect width="68" height="58" rx="12" fill="#e6a52c"/>
+    <text x="34" y="27" text-anchor="middle" class="node">Y</text><text x="34" y="46" text-anchor="middle" class="nodeSmall">1/2</text>
+  </g>
+
+  <!-- Branch 2: top right. -->
+  <g transform="translate(957 260)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(892 325)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(819 388)">
+    <rect width="68" height="58" rx="12" fill="#e6a52c"/>
+    <text x="34" y="27" text-anchor="middle" class="node">Y</text><text x="34" y="46" text-anchor="middle" class="nodeSmall">1/2</text>
+  </g>
+
+  <!-- Branch 3: bottom left. -->
+  <g transform="translate(585 592)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(650 527)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(713 464)">
+    <rect width="68" height="58" rx="12" fill="#e6a52c"/>
+    <text x="34" y="27" text-anchor="middle" class="node">Y</text><text x="34" y="46" text-anchor="middle" class="nodeSmall">1/2</text>
+  </g>
+
+  <!-- Branch 4: bottom right. -->
+  <g transform="translate(957 592)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(892 527)">
+    <rect width="58" height="58" rx="12" fill="#35b9cf"/>
+    <text x="29" y="27" text-anchor="middle" class="node">X</text><text x="29" y="46" text-anchor="middle" class="nodeSmall">1/4</text>
+  </g>
+  <g transform="translate(819 464)">
+    <rect width="68" height="58" rx="12" fill="#e6a52c"/>
+    <text x="34" y="27" text-anchor="middle" class="node">Y</text><text x="34" y="46" text-anchor="middle" class="nodeSmall">1/2</text>
+  </g>
+
+  <!-- Shared observation center. -->
+  <g transform="translate(750 405)" filter="url(#shadow)">
+    <circle cx="50" cy="50" r="50" fill="#d65353"/>
+    <text x="50" y="47" text-anchor="middle" class="centerMain">I</text>
+    <text x="50" y="71" text-anchor="middle" class="centerSmall">CENTER</text>
+  </g>
+
+  <text x="365" y="385" text-anchor="middle" class="caption">X → X → Y → CENTER</text>
+  <text x="1235" y="385" text-anchor="middle" class="caption">X → X → Y → CENTER</text>
+  <text x="365" y="555" text-anchor="middle" class="caption">X → X → Y → CENTER</text>
+  <text x="1235" y="555" text-anchor="middle" class="caption">X → X → Y → CENTER</text>
+
+  <g transform="translate(280 700)">
+    <rect width="1040" height="66" rx="17" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <text x="520" y="29" text-anchor="middle" class="formula">FOUR DIRECTIONAL INSTANCES  →  ONE SHARED CENTER</text>
+    <text x="520" y="52" text-anchor="middle" class="small">The square expands the directional field · it does not alter the P.B.F. sequence</text>
+  </g>
+
+  <line x1="100" y1="792" x2="1500" y2="792" stroke="#d8e4ef" stroke-width="2"/>
+  <text x="800" y="824" text-anchor="middle" class="boundary">THE FOUR BRANCHES REPEAT THE SAME X–X–Y IDENTITY · THEY ARE NOT FOUR NEW FUNCTIONS AND THEIR VALUES ARE NOT ADDED</text>
+</svg>

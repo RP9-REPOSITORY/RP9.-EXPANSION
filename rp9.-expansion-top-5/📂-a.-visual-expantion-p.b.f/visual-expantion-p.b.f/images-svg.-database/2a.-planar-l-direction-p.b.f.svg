@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">2A. Planar L-Direction P.B.F.</title>
+  <desc id="description">The independently established P.B.F. quarter-position is transferred to a complete rotational reference, identified as ninety degrees, and represented by one directed L-shaped execution path. The quarter relation belongs to the angle relative to the full rotation, not to the lengths of the L arms.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eaf2fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/>
+      <feOffset in="blur" dx="0" dy="7" result="offsetBlur"/>
+      <feColorMatrix in="offsetBlur" type="matrix" values="0 0 0 0 0.075  0 0 0 0 0.14  0 0 0 0 0.23  0 0 0 0.16 0" result="shadowColor"/>
+      <feMerge>
+        <feMergeNode in="shadowColor"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="11" markerHeight="11" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#244768"/>
+    </marker>
+    <style>
+      .title { font: 700 42px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .subtitle { font: 500 21px Inter, Arial, sans-serif; fill: #49657f; }
+      .stage { font: 700 18px Inter, Arial, sans-serif; fill: #49657f; letter-spacing: 1.6px; }
+      .main { font: 800 32px Inter, Arial, sans-serif; fill: #13243a; }
+      .white { font: 800 28px Inter, Arial, sans-serif; fill: #ffffff; }
+      .smallWhite { font: 700 18px Inter, Arial, sans-serif; fill: #ffffff; }
+      .caption { font: 500 18px Inter, Arial, sans-serif; fill: #314e69; }
+      .small { font: 600 16px Inter, Arial, sans-serif; fill: #49657f; }
+      .formula { font: 800 25px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .angle { font: 800 28px Inter, Arial, sans-serif; fill: #d65353; }
+      .boundary { font: 700 17px Inter, Arial, sans-serif; fill: #244768; letter-spacing: 0.4px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect x="55" y="45" width="1490" height="810" rx="30" fill="#ffffff" stroke="#c8d8e8" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="100" y="120" class="title">2A. PLANAR L-DIRECTION P.B.F.</text>
+  <text x="100" y="160" class="subtitle">Established quarter-position · complete rotational reference · one directed L-execution</text>
+  <line x1="100" y1="220" x2="1500" y2="220" stroke="#d8e4ef" stroke-width="2"/>
+
+  <!-- Stage 1: established P.B.F. quarter. -->
+  <text x="265" y="275" text-anchor="middle" class="stage">ESTABLISHED BEFORE GEOMETRY</text>
+  <g transform="translate(135 330)" filter="url(#shadow)">
+    <rect width="260" height="170" rx="22" fill="#35b9cf"/>
+    <text x="130" y="73" text-anchor="middle" class="white">X</text>
+    <text x="130" y="118" text-anchor="middle" class="white">1/4</text>
+  </g>
+  <text x="265" y="545" text-anchor="middle" class="caption">P.B.F. establishes the quarter-position</text>
+
+  <line x1="430" y1="415" x2="535" y2="415" stroke="#244768" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2: full rotation and quarter sector. -->
+  <text x="735" y="275" text-anchor="middle" class="stage">ROTATIONAL REFERENCE</text>
+  <g transform="translate(610 315)">
+    <circle cx="125" cy="110" r="105" fill="#f4f8fc" stroke="#244768" stroke-width="5"/>
+    <path d="M 125 110 L 125 5 A 105 105 0 0 1 230 110 Z" fill="#35b9cf" opacity="0.95"/>
+    <line x1="125" y1="110" x2="125" y2="5" stroke="#ffffff" stroke-width="4"/>
+    <line x1="125" y1="110" x2="230" y2="110" stroke="#ffffff" stroke-width="4"/>
+    <path d="M 125 72 A 38 38 0 0 1 163 110" fill="none" stroke="#d65353" stroke-width="5"/>
+    <text x="174" y="70" text-anchor="middle" class="angle">90°</text>
+    <text x="72" y="128" text-anchor="middle" class="main">360°</text>
+  </g>
+  <text x="735" y="545" text-anchor="middle" class="caption">90° / 360° = 1/4</text>
+
+  <line x1="885" y1="415" x2="990" y2="415" stroke="#244768" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: one directed L-shaped X-X-Y path. -->
+  <text x="1240" y="275" text-anchor="middle" class="stage">PLANAR L-EXECUTION</text>
+  <g transform="translate(1000 305)">
+    <path d="M 40 190 H 285 V 18" fill="none" stroke="#244768" stroke-width="10" stroke-linejoin="round" marker-end="url(#arrow)"/>
+
+    <rect x="45" y="135" width="90" height="90" rx="15" fill="#35b9cf"/>
+    <text x="90" y="176" text-anchor="middle" class="white">X</text>
+    <text x="90" y="204" text-anchor="middle" class="smallWhite">1/4</text>
+
+    <rect x="160" y="135" width="90" height="90" rx="15" fill="#35b9cf"/>
+    <text x="205" y="176" text-anchor="middle" class="white">X</text>
+    <text x="205" y="204" text-anchor="middle" class="smallWhite">1/4</text>
+
+    <rect x="240" y="40" width="90" height="90" rx="15" fill="#e6a52c"/>
+    <text x="285" y="81" text-anchor="middle" class="white">Y</text>
+    <text x="285" y="109" text-anchor="middle" class="smallWhite">1/2</text>
+
+    <circle cx="285" cy="190" r="13" fill="#d65353"/>
+    <path d="M 255 190 A 30 30 0 0 1 285 160" fill="none" stroke="#d65353" stroke-width="5"/>
+    <text x="335" y="174" class="angle">90°</text>
+  </g>
+  <text x="1240" y="545" text-anchor="middle" class="caption">X → X → 90° turn → Y</text>
+
+  <g transform="translate(260 610)">
+    <rect width="1080" height="98" rx="18" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <text x="540" y="42" text-anchor="middle" class="formula">1/4  →  90°  →  L</text>
+    <text x="540" y="73" text-anchor="middle" class="small">The proportion is transferred between reference domains · the unit is not transferred</text>
+  </g>
+
+  <line x1="100" y1="765" x2="1500" y2="765" stroke="#d8e4ef" stroke-width="2"/>
+  <text x="800" y="800" text-anchor="middle" class="boundary">THE QUARTER RELATION BELONGS TO THE 90° ANGLE WITHIN 360° · IT DOES NOT COME FROM THE LENGTHS OF THE L ARMS</text>
+</svg>

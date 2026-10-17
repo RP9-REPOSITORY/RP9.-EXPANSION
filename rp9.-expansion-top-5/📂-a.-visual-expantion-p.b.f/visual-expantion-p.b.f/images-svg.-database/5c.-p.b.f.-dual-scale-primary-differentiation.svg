@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <marker id="rArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6 Z" fill="#7c3aed"/></marker>
+    <style>
+      .title{font:700 38px Arial,sans-serif;fill:#0f172a}.sub{font:20px Arial,sans-serif;fill:#475569}.h{font:700 23px Arial,sans-serif;fill:#0f172a}.t{font:18px Arial,sans-serif;fill:#1e293b}.small{font:16px Arial,sans-serif;fill:#475569}.math{font:700 27px Arial,sans-serif;fill:#0f172a}.axis{stroke:#64748b;stroke-width:2}.guide{stroke:#64748b;stroke-width:2;stroke-dasharray:7 7}.shape{stroke:#0f172a;stroke-width:5;fill:none}.inner{stroke:#0f172a;stroke-width:3;fill:none}.xfill{fill:#5eead4;fill-opacity:.58}.yfill{fill:#fbbf24;fill-opacity:.55}.center{fill:#7c3aed}.panel{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.lock{fill:#ede9fe;stroke:#7c3aed;stroke-width:3}.white{fill:#fff}.blue{fill:#2563eb}.teal{fill:#0f766e}.gold{fill:#a16207}
+    </style>
+    <clipPath id="circleClip"><circle cx="540" cy="560" r="300"/></clipPath>
+  </defs>
+  <rect width="1600" height="1100" fill="#fff"/>
+  <text x="800" y="58" text-anchor="middle" class="title">5C. P.B.F. DUAL-SCALE PRIMARY DIFFERENTIATION</text>
+  <text x="800" y="92" text-anchor="middle" class="sub">A reconstructed and expanded edition of RP9_apx 090</text>
+
+  <!-- Geometry panel -->
+  <rect x="55" y="125" width="1010" height="850" rx="18" class="panel"/>
+  <text x="540" y="168" text-anchor="middle" class="h">ONE GEOMETRY · ONE DIFFERENTIATED POSITION FIELD</text>
+
+  <!-- scale headings -->
+  <text x="145" y="214" class="small">NORMALISED POSITION SCALE</text>
+  <g class="math" text-anchor="middle">
+    <text x="240" y="244">−1</text><text x="390" y="244">−1/2</text><text x="540" y="244">0</text><text x="690" y="244">+1/2</text><text x="840" y="244">+1</text>
+  </g>
+
+  <!-- colored differentiated field, clipped to circle -->
+  <g clip-path="url(#circleClip)">
+    <rect x="240" y="260" width="150" height="600" class="xfill"/>
+    <rect x="390" y="260" width="300" height="600" class="yfill"/>
+    <rect x="690" y="260" width="150" height="600" class="xfill"/>
+  </g>
+
+  <!-- square / circles / axes -->
+  <rect x="240" y="260" width="600" height="600" class="shape"/>
+  <circle cx="540" cy="560" r="300" class="shape"/>
+  <circle cx="540" cy="560" r="150" class="inner"/>
+  <line x1="240" y1="560" x2="840" y2="560" class="shape"/>
+  <line x1="540" y1="260" x2="540" y2="860" class="axis"/>
+  <circle cx="540" cy="560" r="10" class="center"/>
+  <text x="560" y="590" class="h">C = 0</text>
+  <line x1="540" y1="560" x2="752" y2="348" stroke="#7c3aed" stroke-width="5" marker-end="url(#rArrow)"/>
+  <text x="660" y="432" class="math" fill="#7c3aed">R</text>
+
+  <!-- five guide positions -->
+  <g class="guide">
+    <line x1="240" y1="220" x2="240" y2="930"/><line x1="390" y1="220" x2="390" y2="930"/><line x1="540" y1="220" x2="540" y2="930"/><line x1="690" y1="220" x2="690" y2="930"/><line x1="840" y1="220" x2="840" y2="930"/>
+  </g>
+
+  <!-- primary function labels -->
+  <g text-anchor="middle">
+    <text x="315" y="495" class="math teal">X</text><text x="315" y="532" class="math">1/4</text><text x="315" y="555" class="small">25%</text>
+    <text x="540" y="465" class="math gold">Y</text><text x="540" y="502" class="math">1/2</text><text x="540" y="525" class="small">50%</text>
+    <text x="765" y="495" class="math teal">X</text><text x="765" y="532" class="math">1/4</text><text x="765" y="555" class="small">25%</text>
+  </g>
+
+  <!-- lower whole number scale -->
+  <text x="145" y="918" class="small">WHOLE-NUMBER POSITION SCALE</text>
+  <g class="math" text-anchor="middle">
+    <text x="240" y="956">−2</text><text x="390" y="956">−1</text><text x="540" y="956">0</text><text x="690" y="956">+1</text><text x="840" y="956">+2</text>
+  </g>
+
+  <!-- Explanation panel -->
+  <rect x="1095" y="125" width="450" height="850" rx="18" class="panel"/>
+  <text x="1320" y="168" text-anchor="middle" class="h">SIMULTANEOUS READINGS</text>
+  <text x="1320" y="218" text-anchor="middle" class="small">same positions · same ratio · different scale</text>
+
+  <g text-anchor="middle">
+    <text x="1185" y="286" class="math teal">X</text><text x="1320" y="286" class="math gold">Y</text><text x="1455" y="286" class="math teal">X</text>
+    <text x="1185" y="330" class="math">1/4</text><text x="1320" y="330" class="math">1/2</text><text x="1455" y="330" class="math">1/4</text>
+    <text x="1185" y="366" class="t">25%</text><text x="1320" y="366" class="t">50%</text><text x="1455" y="366" class="t">25%</text>
+    <line x1="1145" y1="395" x2="1495" y2="395" class="axis"/>
+    <text x="1185" y="443" class="math teal">1</text><text x="1320" y="443" class="math gold">2</text><text x="1455" y="443" class="math teal">1</text>
+  </g>
+
+  <rect x="1140" y="484" width="360" height="106" rx="14" class="lock"/>
+  <text x="1320" y="526" text-anchor="middle" class="math">X : Y : X = 1 : 2 : 1</text>
+  <text x="1320" y="564" text-anchor="middle" class="math">= 1/4 : 1/2 : 1/4</text>
+
+  <text x="1320" y="638" text-anchor="middle" class="h">S2.B DERIVATIONAL CHAIN</text>
+  <text x="1320" y="690" text-anchor="middle" class="math">I</text>
+  <text x="1320" y="730" text-anchor="middle" class="math">↓</text>
+  <text x="1320" y="770" text-anchor="middle" class="math">I/2 + I/2</text>
+  <text x="1320" y="810" text-anchor="middle" class="math">↓</text>
+  <text x="1320" y="850" text-anchor="middle" class="math">I/4 + I/4 + I/2</text>
+  <text x="1320" y="893" text-anchor="middle" class="small">first halving + asymmetrical second halving</text>
+  <text x="1320" y="928" text-anchor="middle" class="h">= FIRST DIFFERENTIATION</text>
+
+  <!-- bottom declaration -->
+  <rect x="135" y="1003" width="1330" height="66" rx="14" class="lock"/>
+  <text x="800" y="1031" text-anchor="middle" class="h">ONE COMPLETE VALUE = TWO PRIMARY FUNCTIONS</text>
+  <text x="800" y="1057" text-anchor="middle" class="small">Three visible positions do not establish three primary functions: X repeats; Y remains the differentiated complementary function.</text>
+</svg>

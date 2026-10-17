@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">3B. Self-Similar Quadratic Expansion P.B.F.</title>
+  <desc id="description">A three-by-three planar field contains nine quadratic P.B.F. fields. The central square preserves the complete 3A center-convergence structure and the eight surrounding squares repeat the same local directional identity at the expanded field level.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eaf2fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/>
+      <feOffset in="blur" dx="0" dy="7" result="offsetBlur"/>
+      <feColorMatrix in="offsetBlur" type="matrix" values="0 0 0 0 0.075  0 0 0 0 0.14  0 0 0 0 0.23  0 0 0 0.16 0" result="shadowColor"/>
+      <feMerge><feMergeNode in="shadowColor"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="scale-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#7c96ad"/>
+    </marker>
+
+    <!-- Simplified local 3A field used in each surrounding square. -->
+    <g id="local-field">
+      <rect x="0" y="0" width="140" height="140" rx="7" fill="#f7fbff" stroke="#244768" stroke-width="3"/>
+      <path d="M 14 14 H 38 V 38 H 61 V 61 H 70 V 70" fill="none" stroke="#7c96ad" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M 126 14 H 102 V 38 H 79 V 61 H 70 V 70" fill="none" stroke="#7c96ad" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M 14 126 H 38 V 102 H 61 V 79 H 70 V 70" fill="none" stroke="#7c96ad" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M 126 126 H 102 V 102 H 79 V 79 H 70 V 70" fill="none" stroke="#7c96ad" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="18" cy="18" r="9" fill="#35b9cf"/>
+      <circle cx="122" cy="18" r="9" fill="#35b9cf"/>
+      <circle cx="18" cy="122" r="9" fill="#35b9cf"/>
+      <circle cx="122" cy="122" r="9" fill="#35b9cf"/>
+      <circle cx="51" cy="51" r="8" fill="#e6a52c"/>
+      <circle cx="89" cy="51" r="8" fill="#e6a52c"/>
+      <circle cx="51" cy="89" r="8" fill="#e6a52c"/>
+      <circle cx="89" cy="89" r="8" fill="#e6a52c"/>
+      <circle cx="70" cy="70" r="15" fill="#d65353"/>
+    </g>
+
+    <style>
+      .title { font: 700 42px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .subtitle { font: 500 21px Inter, Arial, sans-serif; fill: #49657f; }
+      .stage { font: 700 17px Inter, Arial, sans-serif; fill: #49657f; letter-spacing: 1.4px; }
+      .cell { font: 700 13px Inter, Arial, sans-serif; fill: #49657f; letter-spacing: 0.6px; }
+      .centerCell { font: 800 15px Inter, Arial, sans-serif; fill: #d65353; letter-spacing: 0.6px; }
+      .legend { font: 700 16px Inter, Arial, sans-serif; fill: #314e69; }
+      .small { font: 600 15px Inter, Arial, sans-serif; fill: #49657f; }
+      .formula { font: 800 23px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .boundary { font: 700 16px Inter, Arial, sans-serif; fill: #244768; letter-spacing: 0.3px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect x="55" y="45" width="1490" height="810" rx="30" fill="#ffffff" stroke="#c8d8e8" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="100" y="120" class="title">3B. SELF-SIMILAR QUADRATIC EXPANSION P.B.F.</text>
+  <text x="100" y="160" class="subtitle">One 3A center-field · nine quadratic fields · one preserved local identity across scale</text>
+  <line x1="100" y1="215" x2="1500" y2="215" stroke="#d8e4ef" stroke-width="2"/>
+
+  <text x="800" y="245" text-anchor="middle" class="stage">3 × 3 PLANAR FIELD = 9 QUADRATIC FIELDS</text>
+
+  <!-- Scale-expansion directions from the center field to all surrounding field positions. -->
+  <g stroke="#7c96ad" stroke-width="4" stroke-dasharray="8 8" fill="none" opacity="0.8">
+    <line x1="800" y1="475" x2="640" y2="315" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="800" y2="315" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="960" y2="315" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="640" y2="475" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="960" y2="475" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="640" y2="635" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="800" y2="635" marker-end="url(#scale-arrow)"/>
+    <line x1="800" y1="475" x2="960" y2="635" marker-end="url(#scale-arrow)"/>
+  </g>
+
+  <!-- Nine cells. -->
+  <g transform="translate(570 255)"><use xlink:href="#local-field"/></g>
+  <g transform="translate(730 255)"><use xlink:href="#local-field"/></g>
+  <g transform="translate(890 255)"><use xlink:href="#local-field"/></g>
+
+  <g transform="translate(570 415)"><use xlink:href="#local-field"/></g>
+
+  <!-- Central 3A reference field. -->
+  <g transform="translate(730 415)" filter="url(#shadow)">
+    <rect x="-7" y="-7" width="154" height="154" rx="10" fill="#fff7e7" stroke="#d65353" stroke-width="4"/>
+    <use xlink:href="#local-field"/>
+    <text x="70" y="-15" text-anchor="middle" class="centerCell">3A REFERENCE FIELD</text>
+  </g>
+
+  <g transform="translate(890 415)"><use xlink:href="#local-field"/></g>
+
+  <g transform="translate(570 575)"><use xlink:href="#local-field"/></g>
+  <g transform="translate(730 575)"><use xlink:href="#local-field"/></g>
+  <g transform="translate(890 575)"><use xlink:href="#local-field"/></g>
+
+  <!-- Legend and governing relation. -->
+  <g transform="translate(180 330)">
+    <rect width="270" height="210" rx="20" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <text x="135" y="34" text-anchor="middle" class="stage">LOCAL IDENTITY</text>
+    <circle cx="48" cy="77" r="12" fill="#35b9cf"/><text x="75" y="83" class="legend">X position</text>
+    <circle cx="48" cy="116" r="12" fill="#e6a52c"/><text x="75" y="122" class="legend">Y position</text>
+    <circle cx="48" cy="155" r="12" fill="#d65353"/><text x="75" y="161" class="legend">Shared center</text>
+    <text x="135" y="194" text-anchor="middle" class="small">X → X → Y → CENTER</text>
+  </g>
+
+  <g transform="translate(1150 330)">
+    <rect width="270" height="210" rx="20" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <text x="135" y="34" text-anchor="middle" class="stage">SCALE RELATION</text>
+    <text x="135" y="82" text-anchor="middle" class="formula">1 → 9</text>
+    <text x="135" y="117" text-anchor="middle" class="small">field positions</text>
+    <text x="135" y="153" text-anchor="middle" class="formula">FUNCTION = SAME</text>
+    <text x="135" y="187" text-anchor="middle" class="small">field extent = expanded</text>
+  </g>
+
+  <g transform="translate(300 755)">
+    <rect width="1000" height="55" rx="16" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <text x="500" y="25" text-anchor="middle" class="formula">CENTRAL 3A FIELD  →  SELF-SIMILAR 3 × 3 EXPANSION</text>
+    <text x="500" y="46" text-anchor="middle" class="small">The field expands · the local P.B.F. identity remains unchanged</text>
+  </g>
+
+  <line x1="100" y1="827" x2="1500" y2="827" stroke="#d8e4ef" stroke-width="2"/>
+  <text x="800" y="852" text-anchor="middle" class="boundary">THE NINE SQUARES ARE REPEATED REPRESENTATION FIELDS · THEY DO NOT CREATE NINE PRIMARY FUNCTIONS OR A NEW SUM</text>
+</svg>

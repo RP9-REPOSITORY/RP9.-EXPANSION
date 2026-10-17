@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">4A. Cubic Center-Convergence P.B.F.</title>
+  <desc id="description">The two-dimensional precursor is a square divided by its diagonal cross into four triangular pyramidal fields with a common center point. The three-dimensional expansion is a cube partitioned into six square pyramids, one from each cube face, with all six pyramid apexes coinciding at the cube center.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eaf2fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/>
+      <feOffset in="blur" dx="0" dy="7" result="offsetBlur"/>
+      <feColorMatrix in="offsetBlur" type="matrix" values="0 0 0 0 0.075  0 0 0 0 0.14  0 0 0 0 0.23  0 0 0 0.16 0" result="shadowColor"/>
+      <feMerge><feMergeNode in="shadowColor"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#244768"/>
+    </marker>
+    <style>
+      .title { font: 700 42px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .subtitle { font: 500 21px Inter, Arial, sans-serif; fill: #49657f; }
+      .stage { font: 700 18px Inter, Arial, sans-serif; fill: #49657f; letter-spacing: 1.5px; }
+      .field { font: 800 20px Inter, Arial, sans-serif; fill: #244768; }
+      .degree { font: 800 19px Inter, Arial, sans-serif; fill: #d65353; }
+      .faceNumber { font: 800 15px Inter, Arial, sans-serif; fill: #ffffff; }
+      .centerMain { font: 800 31px Inter, Arial, sans-serif; fill: #ffffff; }
+      .centerSmall { font: 700 13px Inter, Arial, sans-serif; fill: #ffffff; letter-spacing: 0.7px; }
+      .caption { font: 500 18px Inter, Arial, sans-serif; fill: #314e69; }
+      .small { font: 600 15px Inter, Arial, sans-serif; fill: #49657f; }
+      .formula { font: 800 23px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 0.9px; }
+      .boundary { font: 700 16px Inter, Arial, sans-serif; fill: #244768; letter-spacing: 0.3px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect x="55" y="45" width="1490" height="810" rx="30" fill="#ffffff" stroke="#c8d8e8" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="100" y="120" class="title">4A. CUBIC CENTER-CONVERGENCE P.B.F.</text>
+  <text x="100" y="160" class="subtitle">Four center-directed fields in 2D · six center-directed square pyramids in 3D</text>
+  <line x1="100" y1="215" x2="1500" y2="215" stroke="#d8e4ef" stroke-width="2"/>
+
+  <!-- 2D precursor. -->
+  <text x="385" y="270" text-anchor="middle" class="stage">2D PRECURSOR — SQUARE WITH DIAGONAL CROSS</text>
+  <g transform="translate(170 305)">
+    <!-- Four triangular pyramidal fields sharing the center apex. -->
+    <polygon points="0,0 430,0 215,215" fill="#35b9cf" opacity="0.46"/>
+    <polygon points="430,0 430,430 215,215" fill="#4aa1ca" opacity="0.32"/>
+    <polygon points="430,430 0,430 215,215" fill="#e6a52c" opacity="0.35"/>
+    <polygon points="0,430 0,0 215,215" fill="#d65353" opacity="0.22"/>
+    <rect width="430" height="430" fill="none" stroke="#244768" stroke-width="6"/>
+    <line x1="0" y1="0" x2="430" y2="430" stroke="#244768" stroke-width="5"/>
+    <line x1="430" y1="0" x2="0" y2="430" stroke="#244768" stroke-width="5"/>
+
+    <!-- 45 degree corner markers. -->
+    <path d="M 58 0 A 58 58 0 0 1 41 41" fill="none" stroke="#d65353" stroke-width="5"/>
+    <path d="M 372 0 A 58 58 0 0 0 389 41" fill="none" stroke="#d65353" stroke-width="5"/>
+    <text x="77" y="39" class="degree">45°</text>
+    <text x="313" y="39" class="degree">45°</text>
+
+    <text x="215" y="80" text-anchor="middle" class="field">FIELD 1</text>
+    <text x="355" y="222" text-anchor="middle" class="field">FIELD 2</text>
+    <text x="215" y="365" text-anchor="middle" class="field">FIELD 3</text>
+    <text x="75" y="222" text-anchor="middle" class="field">FIELD 4</text>
+
+    <circle cx="215" cy="215" r="48" fill="#d65353" stroke="#ffffff" stroke-width="4" filter="url(#shadow)"/>
+    <text x="215" y="209" text-anchor="middle" class="centerMain">I</text>
+    <text x="215" y="233" text-anchor="middle" class="centerSmall">CENTER</text>
+  </g>
+  <text x="385" y="765" text-anchor="middle" class="caption">Four triangular 2D pyramidal fields · one common center point</text>
+
+  <!-- Dimensional transition. -->
+  <line x1="650" y1="505" x2="760" y2="505" stroke="#244768" stroke-width="7" marker-end="url(#arrow)"/>
+  <text x="705" y="475" text-anchor="middle" class="stage">2D → 3D</text>
+
+  <!-- 3D cube partitioned by six face-to-center pyramids. -->
+  <text x="1140" y="270" text-anchor="middle" class="stage">3D EXPANSION — SIX SQUARE PYRAMIDS FORM ONE CUBE</text>
+  <g transform="translate(780 275)">
+    <!-- Isometric cube vertices: back face 80,0 / 350,90 / 350,350 / 80,260; front face 240,90 / 510,180 / 510,440 / 240,350. -->
+    <polygon points="80,0 350,90 510,180 240,90" fill="#c9edf4" opacity="0.48" stroke="#244768" stroke-width="5"/>
+    <polygon points="240,90 510,180 510,440 240,350" fill="#dff5f8" opacity="0.40" stroke="#244768" stroke-width="5"/>
+    <polygon points="80,0 240,90 240,350 80,260" fill="#edf7fb" opacity="0.58" stroke="#244768" stroke-width="5"/>
+    <polygon points="350,90 510,180 510,440 350,350" fill="#fbe7bf" opacity="0.32" stroke="#244768" stroke-width="5"/>
+    <polygon points="80,260 240,350 510,440 350,350" fill="#e6a52c" opacity="0.20" stroke="#244768" stroke-width="5"/>
+
+    <!-- Back face and cube edges. -->
+    <polygon points="80,0 350,90 350,350 80,260" fill="#35b9cf" opacity="0.08" stroke="#244768" stroke-width="5"/>
+    <line x1="80" y1="0" x2="240" y2="90" stroke="#244768" stroke-width="5"/>
+    <line x1="350" y1="90" x2="510" y2="180" stroke="#244768" stroke-width="5"/>
+    <line x1="350" y1="350" x2="510" y2="440" stroke="#244768" stroke-width="5"/>
+    <line x1="80" y1="260" x2="240" y2="350" stroke="#244768" stroke-width="5"/>
+
+    <!-- Center connects to all eight corners: this exposes the six square-pyramid partition. -->
+    <g stroke="#7c96ad" stroke-width="3.5" fill="none" opacity="0.92">
+      <line x1="295" y1="220" x2="80" y2="0"/><line x1="295" y1="220" x2="350" y2="90"/>
+      <line x1="295" y1="220" x2="350" y2="350"/><line x1="295" y1="220" x2="80" y2="260"/>
+      <line x1="295" y1="220" x2="240" y2="90"/><line x1="295" y1="220" x2="510" y2="180"/>
+      <line x1="295" y1="220" x2="510" y2="440"/><line x1="295" y1="220" x2="240" y2="350"/>
+    </g>
+
+    <!-- Six square-face bases, numbered by their face-center positions. -->
+    <g fill="#35b9cf" stroke="#ffffff" stroke-width="3">
+      <circle cx="295" cy="90" r="19"/><circle cx="295" cy="350" r="19"/>
+      <circle cx="160" cy="175" r="19"/><circle cx="430" cy="265" r="19"/>
+      <circle cx="215" cy="175" r="19"/><circle cx="375" cy="265" r="19"/>
+    </g>
+    <g class="faceNumber" text-anchor="middle">
+      <text x="295" y="96">1</text><text x="295" y="356">2</text>
+      <text x="160" y="181">3</text><text x="430" y="271">4</text>
+      <text x="215" y="181">5</text><text x="375" y="271">6</text>
+    </g>
+
+    <!-- Six base-to-apex relations converge at the common center. -->
+    <g stroke="#244768" stroke-width="5" fill="none" marker-end="url(#arrow)">
+      <line x1="295" y1="90" x2="295" y2="220"/><line x1="295" y1="350" x2="295" y2="220"/>
+      <line x1="160" y1="175" x2="295" y2="220"/><line x1="430" y1="265" x2="295" y2="220"/>
+      <line x1="215" y1="175" x2="295" y2="220"/><line x1="375" y1="265" x2="295" y2="220"/>
+    </g>
+
+    <circle cx="295" cy="220" r="50" fill="#d65353" stroke="#ffffff" stroke-width="4" filter="url(#shadow)"/>
+    <text x="295" y="214" text-anchor="middle" class="centerMain">I</text>
+    <text x="295" y="238" text-anchor="middle" class="centerSmall">CENTER</text>
+  </g>
+  <text x="1075" y="765" text-anchor="middle" class="caption">Six square bases · six inward pyramid volumes · one common cubic center</text>
+
+  <g transform="translate(365 780)">
+    <rect width="870" height="44" rx="15" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <text x="435" y="28" text-anchor="middle" class="formula">4 CENTER-DIRECTED 2D FIELDS  →  6 CENTER-DIRECTED 3D PYRAMIDS  →  1 CUBE</text>
+  </g>
+
+  <text x="800" y="846" text-anchor="middle" class="boundary">THE DIMENSION CHANGES FROM SQUARE TO CUBE · THE SHARED-CENTER FUNCTION REMAINS THE SAME</text>
+</svg>

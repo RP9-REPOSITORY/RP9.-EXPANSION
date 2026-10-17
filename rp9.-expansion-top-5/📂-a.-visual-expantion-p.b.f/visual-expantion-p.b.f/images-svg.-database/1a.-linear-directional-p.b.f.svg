@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">1A. Linear Directional P.B.F.</title>
+  <desc id="description">The established P.B.F. sequence shown in one linear direction: one whole becomes two equal halves, and one half is divided into two quarters while the other half remains unchanged.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eaf2fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#13243a" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#244768"/>
+    </marker>
+    <style>
+      .title { font: 700 42px Inter, Arial, sans-serif; fill: #13243a; letter-spacing: 1px; }
+      .subtitle { font: 500 21px Inter, Arial, sans-serif; fill: #49657f; }
+      .stage { font: 700 19px Inter, Arial, sans-serif; fill: #49657f; letter-spacing: 1.8px; }
+      .value { font: 700 34px Inter, Arial, sans-serif; fill: #ffffff; }
+      .symbol { font: 800 27px Inter, Arial, sans-serif; fill: #13243a; }
+      .caption { font: 500 20px Inter, Arial, sans-serif; fill: #314e69; }
+      .small { font: 600 17px Inter, Arial, sans-serif; fill: #49657f; }
+      .boundary { font: 700 18px Inter, Arial, sans-serif; fill: #244768; letter-spacing: 0.6px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect x="55" y="45" width="1490" height="810" rx="30" fill="#ffffff" stroke="#c8d8e8" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="100" y="120" class="title">1A. LINEAR DIRECTIONAL P.B.F.</text>
+  <text x="100" y="160" class="subtitle">One established sequence · one line · one execution direction</text>
+
+  <line x1="100" y1="245" x2="1500" y2="245" stroke="#d8e4ef" stroke-width="2"/>
+
+  <text x="220" y="305" text-anchor="middle" class="stage">ORIGINAL WHOLE</text>
+  <text x="775" y="305" text-anchor="middle" class="stage">FIRST BINARY DIVISION</text>
+  <text x="1330" y="305" text-anchor="middle" class="stage">PRIMARY DIFFERENTIATION</text>
+
+  <g transform="translate(100 350)">
+    <rect width="240" height="160" rx="18" fill="#244768"/>
+    <text x="120" y="72" text-anchor="middle" class="value">I</text>
+    <text x="120" y="116" text-anchor="middle" class="value">1</text>
+  </g>
+
+  <line x1="375" y1="430" x2="535" y2="430" stroke="#244768" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <g transform="translate(570 350)">
+    <rect width="205" height="160" rx="18" fill="#3b8fc2"/>
+    <rect x="205" width="205" height="160" rx="18" fill="#3b8fc2"/>
+    <line x1="205" y1="12" x2="205" y2="148" stroke="#ffffff" stroke-width="4"/>
+    <text x="102.5" y="75" text-anchor="middle" class="value">I/2</text>
+    <text x="102.5" y="116" text-anchor="middle" class="value">1/2</text>
+    <text x="307.5" y="75" text-anchor="middle" class="value">I/2</text>
+    <text x="307.5" y="116" text-anchor="middle" class="value">1/2</text>
+  </g>
+
+  <line x1="1015" y1="430" x2="1110" y2="430" stroke="#244768" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1140 350)">
+    <rect width="105" height="160" rx="18" fill="#35b9cf"/>
+    <rect x="105" width="105" height="160" fill="#35b9cf"/>
+    <rect x="210" width="210" height="160" rx="18" fill="#e6a52c"/>
+    <line x1="105" y1="12" x2="105" y2="148" stroke="#ffffff" stroke-width="4"/>
+    <line x1="210" y1="12" x2="210" y2="148" stroke="#ffffff" stroke-width="4"/>
+    <text x="52.5" y="73" text-anchor="middle" class="value">I/4</text>
+    <text x="52.5" y="116" text-anchor="middle" class="value">1/4</text>
+    <text x="157.5" y="73" text-anchor="middle" class="value">I/4</text>
+    <text x="157.5" y="116" text-anchor="middle" class="value">1/4</text>
+    <text x="315" y="73" text-anchor="middle" class="value">I/2</text>
+    <text x="315" y="116" text-anchor="middle" class="value">1/2</text>
+  </g>
+
+  <text x="220" y="555" text-anchor="middle" class="caption">Complete reference</text>
+  <text x="775" y="555" text-anchor="middle" class="caption">Two equal positions · no differentiation</text>
+  <text x="1350" y="555" text-anchor="middle" class="caption">Two equal X positions · one preserved Y position</text>
+
+  <g transform="translate(445 620)">
+    <rect width="710" height="92" rx="18" fill="#f4f8fc" stroke="#bfd1e2" stroke-width="2"/>
+    <circle cx="155" cy="46" r="24" fill="#35b9cf"/>
+    <text x="155" y="55" text-anchor="middle" class="symbol">X</text>
+    <text x="205" y="53" class="caption">= 1/4</text>
+    <circle cx="335" cy="46" r="24" fill="#35b9cf"/>
+    <text x="335" y="55" text-anchor="middle" class="symbol">X</text>
+    <text x="385" y="53" class="caption">= 1/4</text>
+    <circle cx="515" cy="46" r="24" fill="#e6a52c"/>
+    <text x="515" y="55" text-anchor="middle" class="symbol">Y</text>
+    <text x="565" y="53" class="caption">= 1/2</text>
+  </g>
+
+  <line x1="100" y1="770" x2="1500" y2="770" stroke="#d8e4ef" stroke-width="2"/>
+  <text x="800" y="812" text-anchor="middle" class="boundary">P.B.F. ESTABLISHES THE FUNCTION · THE DIAGRAM REPRESENTS ITS LINEAR EXECUTION</text>
+</svg>
