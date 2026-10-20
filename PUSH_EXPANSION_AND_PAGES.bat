@@ -10,7 +10,7 @@ set "GIT_CONFIG_VALUE_1=false"
 set "GIT_CONFIG_KEY_2=gc.autoPackLimit"
 set "GIT_CONFIG_VALUE_2=0"
 title RP9 EXPANSION - Push and GitHub Pages
-cd /d "F:\GitHub\RP9.-EXPANSION"
+cd /d "F:\GitHub\RP9.-EXPANSION-DEMO"
 if errorlevel 1 goto failed
 where git >nul 2>&1
 if errorlevel 1 goto failed
@@ -22,7 +22,7 @@ if not "%BRANCH%"=="main" (
     echo ERROR: Expected branch main. No changes were made.
     goto failed
 )
-echo Repository: F:\GitHub\RP9.-EXPANSION
+echo Repository: F:\GitHub\RP9.-EXPANSION-DEMO
 echo.
 git remote -v
 echo.
