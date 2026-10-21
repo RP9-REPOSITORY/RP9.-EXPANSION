@@ -1,0 +1,33 @@
+{
+  "script": "RP9_RESIDUAL_VALUE.py",
+  "version": "3.0.0",
+  "files": [
+    {
+      "name": "RESIDUAL_VALUE_DATA.json",
+      "size_bytes": 6068,
+      "sha256": "6fb496284748098d380a0fc63a4e8e5b5f1a171635ce1bedd3fd0440196f9ed8"
+    },
+    {
+      "name": "RESIDUAL_VALUE_TRACE.json",
+      "size_bytes": 6392,
+      "sha256": "a85e24c8fa59f080d4c88a4c07b33fd851b68e971b048298febea2b8b11655a0"
+    },
+    {
+      "name": "RESIDUAL_VALUE_FULL_DATASHEET.json",
+      "size_bytes": 13191,
+      "sha256": "24940514892cf696f20c93042eb61629c7511f4912b279ad74b2ff305b347271"
+    },
+    {
+      "name": "RESIDUAL_VALUE_PRESENTATION.md",
+      "size_bytes": 1109,
+      "sha256": "2973ca9e17c37d86d12ff5cc791d6ec4726bfd21a59ae41459569ab0e81d51cf"
+    },
+    {
+      "name": "RESIDUAL_VALUE_CONTROL_LOG.txt",
+      "size_bytes": 2468,
+      "sha256": "11205b13a2f8b4a80f9ab6ad36579701b4dee2f7897da41c5f3d11933cc51cb8"
+    }
+  ],
+  "file_count": 6,
+  "status": "PASS"
+}

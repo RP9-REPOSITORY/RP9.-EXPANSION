@@ -1,0 +1,46 @@
+{
+  "repository": "RP9. RH. Z0",
+  "repository_branch": "2. RP9. EXPANSION",
+  "python_code_id": "CODE 1",
+  "filesystem_name": "CODE_1.py",
+  "official_code_title": "CODE 1. RP9 FIRST DIFFERENTIATION — REVISED",
+  "script_version": "2.1.0",
+  "generated_at_utc": "2026-10-04T18:20:35Z",
+  "files": {
+    "data_json": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_DATA.json",
+      "bytes": 10642,
+      "sha256": "24ee875d38f2446477e787838aeb64223b32f956a9629cfaa6188052dd178c9d"
+    },
+    "trace_json": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_TRACE.json",
+      "bytes": 8259,
+      "sha256": "9d4d49db9a62868e089e10a377193a2543500f069345e1cc662ba8dad84cb5ac"
+    },
+    "full_datasheet_json": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_FULL_DATASHEET.json",
+      "bytes": 20108,
+      "sha256": "60d6532fe8663041ba73caf54fe2d2e068c6de3328cabcd82901e736b0726a6a"
+    },
+    "presentation_markdown": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_REPORT.md",
+      "bytes": 5057,
+      "sha256": "d1c0322b40dae3a7643eb49f5c1a71f730387f1edb9cca285e77b52bfbd9435d"
+    },
+    "control_log": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_CONTROL.txt",
+      "bytes": 3819,
+      "sha256": "1cdf185747421a7ba543a81482eb9c2fe72ce51d64f479ed5a1bafa40621c921"
+    },
+    "audit_json": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_AUDIT.json",
+      "bytes": 4642,
+      "sha256": "3831684c9808b8a9ef09c7640479558a170b5d92a252224bd7a7eed8c4ecf3a1"
+    },
+    "execution_log": {
+      "path": "F:\\RP9. Vault\\RP9. OFFICIAL SUBMISSION 1\\RP9. RH. Z0\\2. RP9. EXPANSION\\C. CODE ARCHITECTURE\\A. CODE 1\\1. Python\\2. OUTPUT\\CODE1_EXECUTION.log",
+      "bytes": 1515,
+      "sha256": "334cdd0806744832c813d27fb96ebbbd9c2981af3217f378dc08ce068b72918f"
+    }
+  }
+}

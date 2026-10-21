@@ -1,0 +1,110 @@
+{
+    "TRACE": [
+        {
+            "step_id": "1",
+            "title": "VERIFY_FIRST_RELATION_POSITION",
+            "what_is_tested": "The first relation position 1/3 <-> 2/3.",
+            "how_it_is_tested": "The script verifies that 1/3 + 2/3 = 1 and that this node alone may claim origin status.",
+            "why_it_is_tested": "This prevents later representations from being mistaken for the first relation.",
+            "status": "PASS",
+            "final_result": "First relation is locked as origin.",
+            "data": {
+                "left": "1/3",
+                "right": "2/3",
+                "sum": "1",
+                "claim": "PRIMARY_ORIGIN_RELATION",
+                "may_claim_origin": true
+            }
+        },
+        {
+            "step_id": "2",
+            "title": "DERIVE_FIRST_REPRESENTATION",
+            "what_is_tested": "The first representation 1/4 <-> 3/4.",
+            "how_it_is_tested": "The script verifies that 1/4 + 3/4 = 1 and that the representation is derived from RELATION_ORIGIN_1.",
+            "why_it_is_tested": "This locks representation as after-construction, not as a new primary relation.",
+            "status": "PASS",
+            "final_result": "First representation is derived and does not claim origin.",
+            "data": {
+                "active": "3/4",
+                "reference": "1/4",
+                "sum": "1",
+                "derived_from": "RELATION_ORIGIN_1",
+                "claim": "DERIVED_REPRESENTATION",
+                "may_claim_origin": false
+            }
+        },
+        {
+            "step_id": "3",
+            "title": "CHECK_NO_NEW_RELATION_CREATED",
+            "what_is_tested": "Whether representation creates a new relation.",
+            "how_it_is_tested": "The script checks that the representation remains derived, cannot claim origin, and does not use PRIMARY_ORIGIN_RELATION as its claim.",
+            "why_it_is_tested": "This is the lock against circular self-confirmation and false origin transfer.",
+            "status": "PASS",
+            "final_result": "Representation did not create a new primary relation.",
+            "data": {
+                "origin_relation": "RELATION_ORIGIN_1",
+                "representation": "REPRESENTATION_1",
+                "representation_claim": "DERIVED_REPRESENTATION",
+                "representation_may_claim_origin": false
+            }
+        },
+        {
+            "step_id": "4",
+            "title": "VALIDATE_RX8_CAPSULATION",
+            "what_is_tested": "Rx8 as R x 8 capsulation.",
+            "how_it_is_tested": "The script keeps R symbolic and verifies that four square sides of 2R create 8R without measuring R.",
+            "why_it_is_tested": "This shows Rx8 as reconstruction of R, not as a new origin value.",
+            "status": "PASS",
+            "final_result": "Rx8 is validated as capsulation and reconstruction.",
+            "data": {
+                "R_status": "symbolic_R_not_measured",
+                "diameter": "2R",
+                "square_sides": 4,
+                "calculated_perimeter": "8R",
+                "perimeter_coefficient": "8",
+                "derived_from": "REPRESENTATION_1",
+                "may_claim_origin": false
+            }
+        },
+        {
+            "step_id": "5",
+            "title": "VALIDATE_RESIDUAL_LAYER",
+            "what_is_tested": "Whether float residual belongs to representation.",
+            "how_it_is_tested": "The script compares exact 3/4 and 1/4 against float-derived values and checks symmetric residual cancellation.",
+            "why_it_is_tested": "This proves residual as representation trace, not as a mutation of the relation.",
+            "status": "PASS",
+            "final_result": "Residual is isolated to representation and exact relation remains unchanged.",
+            "data": {
+                "exact_ratio": "3/4",
+                "exact_lock": "1/4",
+                "exact_sum": "1",
+                "ratio_observed_float": "7.49999999999999888978e-01",
+                "lock_observed_float": "2.50000000000000111022e-01",
+                "ratio_residual": "-1.11022302462515654042e-16",
+                "lock_residual": "1.11022302462515654042e-16",
+                "symmetric_residual": true,
+                "residual_layer": "RESIDUAL",
+                "derived_from": "REPRESENTATION_1",
+                "may_claim_origin": false
+            }
+        },
+        {
+            "step_id": "6",
+            "title": "FAIL_IF_LATER_LAYER_INTRODUCES_UNGROUNDED_RELATION",
+            "what_is_tested": "Whether any later layer introduces an ungrounded origin relation.",
+            "how_it_is_tested": "The script scans every non-relation node and fails if it claims origin or lacks a derivation source.",
+            "why_it_is_tested": "This is the final lock: no after-construction may be promoted into origin.",
+            "status": "PASS",
+            "final_result": "No later layer introduced an ungrounded primary relation.",
+            "data": {
+                "checked_nodes": [
+                    "RELATION_ORIGIN_1",
+                    "REPRESENTATION_1",
+                    "RX8_CAPSULATION_1",
+                    "RESIDUAL_1"
+                ],
+                "failures": []
+            }
+        }
+    ]
+}

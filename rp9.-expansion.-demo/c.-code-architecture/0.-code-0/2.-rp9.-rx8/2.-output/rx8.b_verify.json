@@ -1,0 +1,11 @@
+{
+    "VERIFY": {
+        "test_1_relational_closure": true,
+        "test_2_representational_closure": true,
+        "test_3_rx8_capsulation": true,
+        "test_4_proportion_preservation": true,
+        "test_5_residual_position": true,
+        "test_6_internal_validation": true,
+        "global_status": "PASS"
+    }
+}

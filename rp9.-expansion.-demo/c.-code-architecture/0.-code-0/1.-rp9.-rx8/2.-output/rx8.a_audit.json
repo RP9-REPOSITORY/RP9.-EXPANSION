@@ -1,0 +1,14 @@
+{
+    "AUDIT": {
+        "what_is_tested": "Audit of origin claims across all layers.",
+        "how_it_is_tested": "Counts origin-capable relation nodes and checks later layers for illegal origin claims.",
+        "why_it_is_tested": "Only the first relation may carry origin status.",
+        "no_competing_relation_search": true,
+        "genealogical_validation_only": true,
+        "origin_relation_count_expected": 1,
+        "origin_relation_count_observed": 1,
+        "later_origin_claims": [],
+        "global_status": "PASS",
+        "final_result": "PASS"
+    }
+}

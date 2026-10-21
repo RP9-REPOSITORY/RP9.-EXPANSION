@@ -1,0 +1,11 @@
+{
+    "AUDIT": {
+        "all_tests_include_what_how_why_result": true,
+        "self_contained_execution": true,
+        "external_rp9_code_dependency": false,
+        "geometric_structure_required": false,
+        "phase_dependency_required": false,
+        "only_explicitly_calculated_identities_claimed": true,
+        "global_status": "PASS"
+    }
+}

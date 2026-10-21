@@ -1,0 +1,384 @@
+{
+  "program_id": "CODE4",
+  "version": "2.1.0",
+  "global_status": "COMPLETE RELATIONAL LOCK",
+  "external_numerical_input": "NONE",
+  "controls": [
+    {
+      "control_id": "C4_T01",
+      "title": "PRIMARY COMPLEMENTARY CLOSURE",
+      "status": "PASS",
+      "source": "P.B.F. exact differentiated relation: 3/4 <-> 1/4",
+      "operation": "exact rational closure",
+      "output": "3/4 + 1/4 = 1",
+      "evidence": {
+        "Y": "3/4",
+        "X": "1/4",
+        "whole": "1"
+      },
+      "note": "The complementary P.B.F. relation closes exactly."
+    },
+    {
+      "control_id": "C4_T02",
+      "title": "RECIPROCAL DIRECTION CONTROL",
+      "status": "PASS",
+      "source": "P.B.F. directional reading: 2/3 <-> 3/2",
+      "operation": "reciprocal inversion",
+      "output": "(2/3) * (3/2) = 1",
+      "evidence": {
+        "contained": "2/3",
+        "expanded": "3/2",
+        "closure": "1"
+      },
+      "note": "Direction changes; reciprocal closure is preserved."
+    },
+    {
+      "control_id": "C4_T03",
+      "title": "BINARY NORMALIZATION CONTROL",
+      "status": "PASS",
+      "source": "expanded reciprocal position 3/2 and binary whole 2",
+      "operation": "(3/2) / 2",
+      "output": "3/4 <-> 1/4",
+      "evidence": {
+        "normalized": "3/4",
+        "complement": "1/4"
+      },
+      "note": "Binary normalization returns the established P.B.F. proportion."
+    },
+    {
+      "control_id": "C4_T04",
+      "title": "DIMENSIONAL PROJECTION CONTROL",
+      "status": "PASS",
+      "source": "P.B.F. planar relation 3/4 <-> 1/4",
+      "operation": "exact equivalent representation in an eight-position structural frame",
+      "output": "3/4 = 6/8 ; 1/4 = 2/8",
+      "evidence": {
+        "Y_planar": "3/4",
+        "Y_eight": "6/8",
+        "X_planar": "1/4",
+        "X_eight": "2/8"
+      },
+      "note": "The representational frame changes; the exact proportions do not."
+    },
+    {
+      "control_id": "C4_T05",
+      "title": "COMPLETE EIGHT-POSITION STRUCTURAL REFERENCE",
+      "status": "PASS",
+      "source": "dimensional P.B.F. representation: 6/8 <-> 2/8",
+      "operation": "complementary closure inside the eight-position frame",
+      "output": "6/8 + 2/8 = 8/8 = 1",
+      "evidence": {
+        "Y": "6/8",
+        "X": "2/8",
+        "complete_reference": "8/8",
+        "whole": "1"
+      },
+      "note": "No 3+3 construction is used. This is the exact dimensional P.B.F. representation."
+    },
+    {
+      "control_id": "C4_T06",
+      "title": "DIRECTIONAL NUMERICAL REPRESENTATION",
+      "status": "PASS",
+      "source": "P.B.F. reciprocal direction: 2/3 <-> 3/2",
+      "operation": "directional numerical representation",
+      "output": "6/9 = 2/3 ; 9/6 = 3/2",
+      "evidence": {
+        "contained_PBF": "2/3",
+        "contained_position": "6/9",
+        "expanded_PBF": "3/2",
+        "expanded_position": "9/6",
+        "reciprocal_closure": "1"
+      },
+      "note": "6 and 9 are opposing directional numerical positions; they are not produced by counting X."
+    },
+    {
+      "control_id": "C4_T07",
+      "title": "FUNCTIONAL POSITION TYPE CONTROL",
+      "status": "PASS",
+      "source": "established directional / center / structural position assignments",
+      "operation": "typed positional registration",
+      "output": "6 = expansion ; 7 = center/scale-passage ; 8 = complete circuit ; 9 = contraction",
+      "evidence": {
+        "expansion_direction": 6,
+        "center_scale_passage": 7,
+        "complete_circuit_reference": 8,
+        "contraction_direction": 9
+      },
+      "note": "The assigned functions are registered without inventing another P.B.F. generator."
+    },
+    {
+      "control_id": "C4_T08",
+      "title": "POSITION-7 CENTER / SCALE-PASSAGE LOCK",
+      "status": "PASS",
+      "source": "established P.B.F. directional representation and functional position assignment",
+      "operation": "retain position 7 as the established center/scale-passage position",
+      "output": "6 — 7 — 8 — 9 functional positional architecture",
+      "evidence": {
+        "directional_control": "PASS",
+        "position_control": "PASS",
+        "expansion": 6,
+        "center_scale_passage": 7,
+        "complete_circuit": 8,
+        "contraction": 9
+      },
+      "note": "No separate upstream position-7 generator is introduced."
+    },
+    {
+      "control_id": "C4_T09",
+      "title": "BASE-10 INVERSE SCALE PROJECTION",
+      "status": "PASS",
+      "source": "established center/scale-passage position 7",
+      "operation": "three successive exact /10 scale displacements",
+      "output": "7 -> 0.7 -> 0.07 -> 0.007",
+      "evidence": {
+        "upstream": "PASS",
+        "step1": "0.7",
+        "step2": "0.07",
+        "step3": "0.007",
+        "fraction": "7/1000"
+      },
+      "note": "The coefficient 7 is preserved while its Base-10 scale position changes."
+    },
+    {
+      "control_id": "C4_T10",
+      "title": "FUNCTION / REPRESENTATION DISTINCTION",
+      "status": "PASS",
+      "source": "7 and its Base-10 projected representation 0.007",
+      "operation": "numerical distinction plus explicit scale relation",
+      "output": "7 != 0.007 ; 7 * 10^-3 = 0.007",
+      "evidence": {
+        "numerically_equal": false,
+        "projected": "7/1000"
+      },
+      "note": "Scale projection is not ordinary numerical equality."
+    },
+    {
+      "control_id": "C4_T11",
+      "title": "BINARY MACHINE-SCALE CROSSCHECK",
+      "status": "PASS",
+      "source": "binary64 spacing at 1.0",
+      "operation": "three exact x2 binary scale steps",
+      "output": "2^-52 -> 2^-51 -> 2^-50 -> 2^-49 ; quotient = 8",
+      "evidence": {
+        "steps": [
+          "1/4503599627370496",
+          "1/2251799813685248",
+          "1/1125899906842624",
+          "1/562949953421312"
+        ],
+        "quotient": "8",
+        "runtime_epsilon": "2.220446049250313e-16",
+        "nextafter_spacing": "2.220446049250313e-16"
+      },
+      "note": "Independent binary-scale crosscheck; it does not originate P.B.F."
+    },
+    {
+      "control_id": "C4_T13",
+      "title": "EXACT POSITIONAL DIFFERENCE",
+      "status": "PASS",
+      "source": "Calculated outputs of C4_T09 and C4_T11",
+      "operation": "position - anchor",
+      "output": "position - anchor",
+      "evidence": {
+        "pairs": [
+          {
+            "name": "BASE10_SCALE",
+            "source_control": "C4_T09",
+            "anchor": "7/1000",
+            "position": "7/100",
+            "difference": "63/1000",
+            "reconstructed": "7/100",
+            "relative_quotient": "10",
+            "order": "ABOVE",
+            "anchor_decimal": "0.007",
+            "position_decimal": "0.07",
+            "difference_decimal": "0.063"
+          },
+          {
+            "name": "BINARY_MACHINE_SCALE",
+            "source_control": "C4_T11",
+            "anchor": "1/4503599627370496",
+            "position": "1/562949953421312",
+            "difference": "7/4503599627370496",
+            "reconstructed": "1/562949953421312",
+            "relative_quotient": "8",
+            "order": "ABOVE",
+            "anchor_decimal": "0.0000000000000002220446049250313080847263336181640625",
+            "position_decimal": "0.0000000000000017763568394002504646778106689453125",
+            "difference_decimal": "0.0000000000000015543122344752191565930843353271484375"
+          }
+        ]
+      },
+      "note": "Arithmetic consistency of calculated positions; no additional numerical continuation is generated."
+    },
+    {
+      "control_id": "C4_T14",
+      "title": "EXACT ARITHMETIC RECONSTRUCTION",
+      "status": "PASS",
+      "source": "Calculated outputs of C4_T09 and C4_T11",
+      "operation": "anchor + difference = position",
+      "output": "anchor + difference = position",
+      "evidence": {
+        "pairs": [
+          {
+            "name": "BASE10_SCALE",
+            "source_control": "C4_T09",
+            "anchor": "7/1000",
+            "position": "7/100",
+            "difference": "63/1000",
+            "reconstructed": "7/100",
+            "relative_quotient": "10",
+            "order": "ABOVE",
+            "anchor_decimal": "0.007",
+            "position_decimal": "0.07",
+            "difference_decimal": "0.063"
+          },
+          {
+            "name": "BINARY_MACHINE_SCALE",
+            "source_control": "C4_T11",
+            "anchor": "1/4503599627370496",
+            "position": "1/562949953421312",
+            "difference": "7/4503599627370496",
+            "reconstructed": "1/562949953421312",
+            "relative_quotient": "8",
+            "order": "ABOVE",
+            "anchor_decimal": "0.0000000000000002220446049250313080847263336181640625",
+            "position_decimal": "0.0000000000000017763568394002504646778106689453125",
+            "difference_decimal": "0.0000000000000015543122344752191565930843353271484375"
+          }
+        ]
+      },
+      "note": "Arithmetic consistency of calculated positions; no additional numerical continuation is generated."
+    },
+    {
+      "control_id": "C4_T15",
+      "title": "EXACT RELATIVE QUOTIENT",
+      "status": "PASS",
+      "source": "Calculated outputs of C4_T09 and C4_T11",
+      "operation": "position / anchor",
+      "output": "position / anchor",
+      "evidence": {
+        "pairs": [
+          {
+            "name": "BASE10_SCALE",
+            "source_control": "C4_T09",
+            "anchor": "7/1000",
+            "position": "7/100",
+            "difference": "63/1000",
+            "reconstructed": "7/100",
+            "relative_quotient": "10",
+            "order": "ABOVE",
+            "anchor_decimal": "0.007",
+            "position_decimal": "0.07",
+            "difference_decimal": "0.063"
+          },
+          {
+            "name": "BINARY_MACHINE_SCALE",
+            "source_control": "C4_T11",
+            "anchor": "1/4503599627370496",
+            "position": "1/562949953421312",
+            "difference": "7/4503599627370496",
+            "reconstructed": "1/562949953421312",
+            "relative_quotient": "8",
+            "order": "ABOVE",
+            "anchor_decimal": "0.0000000000000002220446049250313080847263336181640625",
+            "position_decimal": "0.0000000000000017763568394002504646778106689453125",
+            "difference_decimal": "0.0000000000000015543122344752191565930843353271484375"
+          }
+        ]
+      },
+      "note": "Arithmetic consistency of calculated positions; no additional numerical continuation is generated."
+    },
+    {
+      "control_id": "C4_T16",
+      "title": "POSITIONAL ORDER",
+      "status": "PASS",
+      "source": "Calculated outputs of C4_T09 and C4_T11",
+      "operation": "compare calculated positions and difference signs",
+      "output": "compare calculated positions and difference signs",
+      "evidence": {
+        "pairs": [
+          {
+            "name": "BASE10_SCALE",
+            "source_control": "C4_T09",
+            "anchor": "7/1000",
+            "position": "7/100",
+            "difference": "63/1000",
+            "reconstructed": "7/100",
+            "relative_quotient": "10",
+            "order": "ABOVE",
+            "anchor_decimal": "0.007",
+            "position_decimal": "0.07",
+            "difference_decimal": "0.063"
+          },
+          {
+            "name": "BINARY_MACHINE_SCALE",
+            "source_control": "C4_T11",
+            "anchor": "1/4503599627370496",
+            "position": "1/562949953421312",
+            "difference": "7/4503599627370496",
+            "reconstructed": "1/562949953421312",
+            "relative_quotient": "8",
+            "order": "ABOVE",
+            "anchor_decimal": "0.0000000000000002220446049250313080847263336181640625",
+            "position_decimal": "0.0000000000000017763568394002504646778106689453125",
+            "difference_decimal": "0.0000000000000015543122344752191565930843353271484375"
+          }
+        ]
+      },
+      "note": "Arithmetic consistency of calculated positions; no additional numerical continuation is generated."
+    },
+    {
+      "control_id": "C4_T17",
+      "title": "EXACT TERMINATING DECIMAL ROUNDTRIP",
+      "status": "PASS",
+      "source": "Calculated outputs of C4_T09 and C4_T11",
+      "operation": "integer decimal encoding -> exact rational reconstruction",
+      "output": "integer decimal encoding -> exact rational reconstruction",
+      "evidence": {
+        "pairs": [
+          {
+            "name": "BASE10_SCALE",
+            "source_control": "C4_T09",
+            "anchor": "7/1000",
+            "position": "7/100",
+            "difference": "63/1000",
+            "reconstructed": "7/100",
+            "relative_quotient": "10",
+            "order": "ABOVE",
+            "anchor_decimal": "0.007",
+            "position_decimal": "0.07",
+            "difference_decimal": "0.063"
+          },
+          {
+            "name": "BINARY_MACHINE_SCALE",
+            "source_control": "C4_T11",
+            "anchor": "1/4503599627370496",
+            "position": "1/562949953421312",
+            "difference": "7/4503599627370496",
+            "reconstructed": "1/562949953421312",
+            "relative_quotient": "8",
+            "order": "ABOVE",
+            "anchor_decimal": "0.0000000000000002220446049250313080847263336181640625",
+            "position_decimal": "0.0000000000000017763568394002504646778106689453125",
+            "difference_decimal": "0.0000000000000015543122344752191565930843353271484375"
+          }
+        ]
+      },
+      "note": "Arithmetic consistency of calculated positions; no additional numerical continuation is generated."
+    },
+    {
+      "control_id": "C4_T12",
+      "title": "GLOBAL ADMISSION / PROVENANCE CONTROL",
+      "status": "PASS",
+      "source": "C4_T01 ... C4_T11 and C4_T13 ... C4_T17",
+      "operation": "audit source -> operation -> output",
+      "output": "EXTERNAL_NUMERICAL_INPUT = NONE",
+      "evidence": {
+        "provenance_complete": true,
+        "retired_values_present": []
+      },
+      "note": "Checks recorded provenance fields and specified retired strings; this is not a general derivation proof."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "VERIFY": {
+        "test_1_exact_relation_no_residual": true,
+        "test_2_float_representation_layer": true,
+        "test_3_vesica_float_residual": true,
+        "test_4_residual_symmetry": true,
+        "test_5_residual_position_by_comparison": true,
+        "test_6_machine_trace": true,
+        "test_7_decimal_crosscheck": true,
+        "test_8_global_residual_integrity": true,
+        "global_status": "PASS"
+    }
+}

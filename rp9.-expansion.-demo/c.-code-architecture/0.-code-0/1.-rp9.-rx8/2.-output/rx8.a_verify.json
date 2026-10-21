@@ -1,0 +1,15 @@
+{
+    "VERIFY": {
+        "what_is_tested": "Machine-readable final verification flags.",
+        "how_it_is_tested": "Each step must return PASS for global PASS.",
+        "why_it_is_tested": "This gives a direct audit surface for external review.",
+        "first_relation_locked": true,
+        "first_representation_derived": true,
+        "representation_does_not_create_new_relation": true,
+        "rx8_is_capsulation": true,
+        "residual_belongs_to_representation": true,
+        "no_ungrounded_later_relation": true,
+        "global_status": "PASS",
+        "final_result": "PASS"
+    }
+}

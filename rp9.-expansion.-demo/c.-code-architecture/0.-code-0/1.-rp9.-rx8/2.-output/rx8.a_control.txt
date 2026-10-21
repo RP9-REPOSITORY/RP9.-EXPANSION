@@ -1,0 +1,15 @@
+RP9 RX8 GENEALOGICAL VALIDATOR LOG
+Generated: 2026-09-29T03:59:54
+Python Code ID: RX8. A
+Official Code Title: RX8. RP9 RX8 GENEALOGICAL VALIDATOR
+File: RX8. A.py
+Version: 1.1.0
+Output directory: F:\RP9. Vault\RP9. OFFICIAL SUBMISSION 1\RP9. RH. Z0\2. RP9. EXPANSION\C. CODE ARCHITECTURE\0. CODE 0\1. RP9. RX8\1. Python\2. OUTPUT
+Global status: PASS
+
+1 | PASS | VERIFY_FIRST_RELATION_POSITION | First relation is locked as origin.
+2 | PASS | DERIVE_FIRST_REPRESENTATION | First representation is derived and does not claim origin.
+3 | PASS | CHECK_NO_NEW_RELATION_CREATED | Representation did not create a new primary relation.
+4 | PASS | VALIDATE_RX8_CAPSULATION | Rx8 is validated as capsulation and reconstruction.
+5 | PASS | VALIDATE_RESIDUAL_LAYER | Residual is isolated to representation and exact relation remains unchanged.
+6 | PASS | FAIL_IF_LATER_LAYER_INTRODUCES_UNGROUNDED_RELATION | No later layer introduced an ungrounded primary relation.

@@ -1,0 +1,68 @@
+RP9 RESIDUAL VALUE CONTROL LOG
+========================================================================
+Script: RP9_RESIDUAL_VALUE.py
+Version: 3.0.0
+Created local: 2026-09-28T04:00:15+02:00
+
+VERIFIED CHAIN
+------------------------------------------------------------------------
+MACHINE REFERENCE AT 1.0
+ACTUAL NEXT REPRESENTABLE POSITION
+R16 = 2^-52
+THREE BINARY SCALE STEPS
+R15 = 2^-49
+EXACT SCALE QUOTIENT = 8
+ACTUAL SPACING CONTROL ACROSS SELECTED BINARY POSITIONS
+
+TRACE
+------------------------------------------------------------------------
+STEP 001
+Layer: A_MACHINE_REFERENCE
+Operation: read_machine_reference
+Formula: epsilon = sys.float_info.epsilon = 2^-52
+Status: PASS
+Note: Establishes the machine-spacing reference used by the remaining controls.
+
+STEP 002
+Layer: B_ACTUAL_SPACING_AT_ONE
+Operation: measure_actual_spacing
+Formula: nextafter(1.0, +inf) - 1.0
+Status: PASS
+Note: Measures the actual next representable binary64 position above 1.0.
+
+STEP 003
+Layer: C_THREE_STEP_BINARY_SCALE
+Operation: derive_three_step_scale
+Formula: R15 = R16 * 2^3 ; R15 / R16 = 2^3
+Status: PASS
+Note: Derives the larger machine-scale position from three exact binary scale steps.
+
+STEP 004
+Layer: D_DIRECT_POWER_CROSSCHECK
+Operation: verify_power_quotient
+Formula: (2^-49) / (2^-52) = 2^3 = 8
+Status: PASS
+Note: Cross-checks the measured scale relation directly from powers of two.
+
+STEP 005
+Layer: E_CONSECUTIVE_POSITION_CONTROL
+Operation: measure_consecutive_positions
+Formula: repeat nextafter(x, +inf) from x = 1.0
+Status: PASS
+Note: Confirms consecutive representable positions immediately above 1.0.
+
+STEP 006
+Layer: F_SCALE_POSITION_CONTROL
+Operation: measure_spacing_across_binary_scale
+Formula: ULP(2^n) = epsilon * 2^n for selected normalized powers of two
+Status: PASS
+Note: Measures actual nextafter spacing at each selected binary scale position instead of using an estimate alone.
+
+FINAL STATUS
+------------------------------------------------------------------------
+PASS
+
+BOUNDARY
+------------------------------------------------------------------------
+The code verifies machine spacing, binary scale position and quotient inside IEEE-754 binary64. It does not require Base 8, octal structure or another RP9 code as a premise.
+The measured quotient 8 is the result of three binary scale steps: 2^3 = 8. Any broader repository interpretation is downstream from this measured relation.

@@ -1,0 +1,191 @@
+[
+  {
+    "index": 1,
+    "timestamp_utc": "2026-09-28T02:00:15Z",
+    "layer": "A_MACHINE_REFERENCE",
+    "operation": "read_machine_reference",
+    "formula": "epsilon = sys.float_info.epsilon = 2^-52",
+    "inputs": {},
+    "result": {
+      "epsilon": "2.22044604925031308085e-16",
+      "expected": "2.22044604925031308085e-16",
+      "power_relation": "2^-52"
+    },
+    "status": "PASS",
+    "note": "Establishes the machine-spacing reference used by the remaining controls."
+  },
+  {
+    "index": 2,
+    "timestamp_utc": "2026-09-28T02:00:15Z",
+    "layer": "B_ACTUAL_SPACING_AT_ONE",
+    "operation": "measure_actual_spacing",
+    "formula": "nextafter(1.0, +inf) - 1.0",
+    "inputs": {
+      "reference_position": "1.0"
+    },
+    "result": {
+      "next_value": "1.00000000000000022204e+00",
+      "measured_spacing": "2.22044604925031308085e-16",
+      "machine_reference": "2.22044604925031308085e-16"
+    },
+    "status": "PASS",
+    "note": "Measures the actual next representable binary64 position above 1.0."
+  },
+  {
+    "index": 3,
+    "timestamp_utc": "2026-09-28T02:00:15Z",
+    "layer": "C_THREE_STEP_BINARY_SCALE",
+    "operation": "derive_three_step_scale",
+    "formula": "R15 = R16 * 2^3 ; R15 / R16 = 2^3",
+    "inputs": {
+      "r16": "2.22044604925031308085e-16",
+      "binary_steps": 3
+    },
+    "result": {
+      "r16": "2.22044604925031308085e-16",
+      "r16_power": "2^-52",
+      "r15": "1.77635683940025046468e-15",
+      "r15_power": "2^-49",
+      "quotient": 8.0
+    },
+    "status": "PASS",
+    "note": "Derives the larger machine-scale position from three exact binary scale steps."
+  },
+  {
+    "index": 4,
+    "timestamp_utc": "2026-09-28T02:00:15Z",
+    "layer": "D_DIRECT_POWER_CROSSCHECK",
+    "operation": "verify_power_quotient",
+    "formula": "(2^-49) / (2^-52) = 2^3 = 8",
+    "inputs": {
+      "lower_power": "2^-52",
+      "upper_power": "2^-49"
+    },
+    "result": {
+      "quotient": 8.0,
+      "expected": 8.0
+    },
+    "status": "PASS",
+    "note": "Cross-checks the measured scale relation directly from powers of two."
+  },
+  {
+    "index": 5,
+    "timestamp_utc": "2026-09-28T02:00:15Z",
+    "layer": "E_CONSECUTIVE_POSITION_CONTROL",
+    "operation": "measure_consecutive_positions",
+    "formula": "repeat nextafter(x, +inf) from x = 1.0",
+    "inputs": {
+      "start": "1.0",
+      "steps": 5
+    },
+    "result": {
+      "series": [
+        {
+          "step": 1,
+          "input": "1.00000000000000000000e+00",
+          "next": "1.00000000000000022204e+00",
+          "spacing": "2.22044604925031308085e-16"
+        },
+        {
+          "step": 2,
+          "input": "1.00000000000000022204e+00",
+          "next": "1.00000000000000044409e+00",
+          "spacing": "2.22044604925031308085e-16"
+        },
+        {
+          "step": 3,
+          "input": "1.00000000000000044409e+00",
+          "next": "1.00000000000000066613e+00",
+          "spacing": "2.22044604925031308085e-16"
+        },
+        {
+          "step": 4,
+          "input": "1.00000000000000066613e+00",
+          "next": "1.00000000000000088818e+00",
+          "spacing": "2.22044604925031308085e-16"
+        },
+        {
+          "step": 5,
+          "input": "1.00000000000000088818e+00",
+          "next": "1.00000000000000111022e+00",
+          "spacing": "2.22044604925031308085e-16"
+        }
+      ],
+      "constant_spacing_in_local_binade": true
+    },
+    "status": "PASS",
+    "note": "Confirms consecutive representable positions immediately above 1.0."
+  },
+  {
+    "index": 6,
+    "timestamp_utc": "2026-09-28T02:00:15Z",
+    "layer": "F_SCALE_POSITION_CONTROL",
+    "operation": "measure_spacing_across_binary_scale",
+    "formula": "ULP(2^n) = epsilon * 2^n for selected normalized powers of two",
+    "inputs": {
+      "range": "2^-3 through 2^3"
+    },
+    "result": {
+      "positions": [
+        {
+          "position": "2^-3",
+          "value": "1.25000000000000000000e-01",
+          "next_value": "1.25000000000000027756e-01",
+          "actual_spacing": "2.77555756156289135106e-17",
+          "expected_spacing": "2.77555756156289135106e-17",
+          "spacing_relation_pass": true
+        },
+        {
+          "position": "2^-2",
+          "value": "2.50000000000000000000e-01",
+          "next_value": "2.50000000000000055511e-01",
+          "actual_spacing": "5.55111512312578270212e-17",
+          "expected_spacing": "5.55111512312578270212e-17",
+          "spacing_relation_pass": true
+        },
+        {
+          "position": "2^-1",
+          "value": "5.00000000000000000000e-01",
+          "next_value": "5.00000000000000111022e-01",
+          "actual_spacing": "1.11022302462515654042e-16",
+          "expected_spacing": "1.11022302462515654042e-16",
+          "spacing_relation_pass": true
+        },
+        {
+          "position": "2^0",
+          "value": "1.00000000000000000000e+00",
+          "next_value": "1.00000000000000022204e+00",
+          "actual_spacing": "2.22044604925031308085e-16",
+          "expected_spacing": "2.22044604925031308085e-16",
+          "spacing_relation_pass": true
+        },
+        {
+          "position": "2^1",
+          "value": "2.00000000000000000000e+00",
+          "next_value": "2.00000000000000044409e+00",
+          "actual_spacing": "4.44089209850062616169e-16",
+          "expected_spacing": "4.44089209850062616169e-16",
+          "spacing_relation_pass": true
+        },
+        {
+          "position": "2^2",
+          "value": "4.00000000000000000000e+00",
+          "next_value": "4.00000000000000088818e+00",
+          "actual_spacing": "8.88178419700125232339e-16",
+          "expected_spacing": "8.88178419700125232339e-16",
+          "spacing_relation_pass": true
+        },
+        {
+          "position": "2^3",
+          "value": "8.00000000000000000000e+00",
+          "next_value": "8.00000000000000177636e+00",
+          "actual_spacing": "1.77635683940025046468e-15",
+          "expected_spacing": "1.77635683940025046468e-15",
+          "spacing_relation_pass": true
+        }
+      ]
+    },
+    "status": "PASS",
+    "note": "Measures actual nextafter spacing at each selected binary scale position instead of using an estimate alone."
+  }
+]

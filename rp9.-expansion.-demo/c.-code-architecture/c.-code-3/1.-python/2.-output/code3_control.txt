@@ -1,0 +1,130 @@
+CODE 3 — META EQUILIBRIUM RELATIONAL VALIDATOR
+==============================================================================
+Version: 2.1.0
+
+CONTROL RESULTS
+------------------------------------------------------------------------------
+C4_T01 — PRIMARY COMPLEMENTARY CLOSURE
+Status: PASS
+Source: P.B.F. exact differentiated relation: 3/4 <-> 1/4
+Operation: exact rational closure
+Output: 3/4 + 1/4 = 1
+Note: The complementary P.B.F. relation closes exactly.
+
+C4_T02 — RECIPROCAL DIRECTION CONTROL
+Status: PASS
+Source: P.B.F. directional reading: 2/3 <-> 3/2
+Operation: reciprocal inversion
+Output: (2/3) * (3/2) = 1
+Note: Direction changes; reciprocal closure is preserved.
+
+C4_T03 — BINARY NORMALIZATION CONTROL
+Status: PASS
+Source: expanded reciprocal position 3/2 and binary whole 2
+Operation: (3/2) / 2
+Output: 3/4 <-> 1/4
+Note: Binary normalization returns the established P.B.F. proportion.
+
+C4_T04 — DIMENSIONAL PROJECTION CONTROL
+Status: PASS
+Source: P.B.F. planar relation 3/4 <-> 1/4
+Operation: exact equivalent representation in an eight-position structural frame
+Output: 3/4 = 6/8 ; 1/4 = 2/8
+Note: The representational frame changes; the exact proportions do not.
+
+C4_T05 — COMPLETE EIGHT-POSITION STRUCTURAL REFERENCE
+Status: PASS
+Source: dimensional P.B.F. representation: 6/8 <-> 2/8
+Operation: complementary closure inside the eight-position frame
+Output: 6/8 + 2/8 = 8/8 = 1
+Note: No 3+3 construction is used. This is the exact dimensional P.B.F. representation.
+
+C4_T06 — DIRECTIONAL NUMERICAL REPRESENTATION
+Status: PASS
+Source: P.B.F. reciprocal direction: 2/3 <-> 3/2
+Operation: directional numerical representation
+Output: 6/9 = 2/3 ; 9/6 = 3/2
+Note: 6 and 9 are opposing directional numerical positions; they are not produced by counting X.
+
+C4_T07 — FUNCTIONAL POSITION TYPE CONTROL
+Status: PASS
+Source: established directional / center / structural position assignments
+Operation: typed positional registration
+Output: 6 = expansion ; 7 = center/scale-passage ; 8 = complete circuit ; 9 = contraction
+Note: The assigned functions are registered without inventing another P.B.F. generator.
+
+C4_T08 — POSITION-7 CENTER / SCALE-PASSAGE LOCK
+Status: PASS
+Source: established P.B.F. directional representation and functional position assignment
+Operation: retain position 7 as the established center/scale-passage position
+Output: 6 — 7 — 8 — 9 functional positional architecture
+Note: No separate upstream position-7 generator is introduced.
+
+C4_T09 — BASE-10 INVERSE SCALE PROJECTION
+Status: PASS
+Source: established center/scale-passage position 7
+Operation: three successive exact /10 scale displacements
+Output: 7 -> 0.7 -> 0.07 -> 0.007
+Note: The coefficient 7 is preserved while its Base-10 scale position changes.
+
+C4_T10 — FUNCTION / REPRESENTATION DISTINCTION
+Status: PASS
+Source: 7 and its Base-10 projected representation 0.007
+Operation: numerical distinction plus explicit scale relation
+Output: 7 != 0.007 ; 7 * 10^-3 = 0.007
+Note: Scale projection is not ordinary numerical equality.
+
+C4_T11 — BINARY MACHINE-SCALE CROSSCHECK
+Status: PASS
+Source: binary64 spacing at 1.0
+Operation: three exact x2 binary scale steps
+Output: 2^-52 -> 2^-51 -> 2^-50 -> 2^-49 ; quotient = 8
+Note: Independent binary-scale crosscheck; it does not originate P.B.F.
+
+C4_T13 — EXACT POSITIONAL DIFFERENCE
+Status: PASS
+Source: Calculated outputs of C4_T09 and C4_T11
+Operation: position - anchor
+Output: position - anchor
+Note: Arithmetic consistency of calculated positions; no additional numerical continuation is generated.
+
+C4_T14 — EXACT ARITHMETIC RECONSTRUCTION
+Status: PASS
+Source: Calculated outputs of C4_T09 and C4_T11
+Operation: anchor + difference = position
+Output: anchor + difference = position
+Note: Arithmetic consistency of calculated positions; no additional numerical continuation is generated.
+
+C4_T15 — EXACT RELATIVE QUOTIENT
+Status: PASS
+Source: Calculated outputs of C4_T09 and C4_T11
+Operation: position / anchor
+Output: position / anchor
+Note: Arithmetic consistency of calculated positions; no additional numerical continuation is generated.
+
+C4_T16 — POSITIONAL ORDER
+Status: PASS
+Source: Calculated outputs of C4_T09 and C4_T11
+Operation: compare calculated positions and difference signs
+Output: compare calculated positions and difference signs
+Note: Arithmetic consistency of calculated positions; no additional numerical continuation is generated.
+
+C4_T17 — EXACT TERMINATING DECIMAL ROUNDTRIP
+Status: PASS
+Source: Calculated outputs of C4_T09 and C4_T11
+Operation: integer decimal encoding -> exact rational reconstruction
+Output: integer decimal encoding -> exact rational reconstruction
+Note: Arithmetic consistency of calculated positions; no additional numerical continuation is generated.
+
+C4_T12 — GLOBAL ADMISSION / PROVENANCE CONTROL
+Status: PASS
+Source: C4_T01 ... C4_T11 and C4_T13 ... C4_T17
+Operation: audit source -> operation -> output
+Output: EXTERNAL_NUMERICAL_INPUT = NONE
+Note: Checks recorded provenance fields and specified retired strings; this is not a general derivation proof.
+
+GLOBAL STATUS
+------------------------------------------------------------------------------
+COMPLETE RELATIONAL LOCK
+
+EXTERNAL_NUMERICAL_INPUT = NONE

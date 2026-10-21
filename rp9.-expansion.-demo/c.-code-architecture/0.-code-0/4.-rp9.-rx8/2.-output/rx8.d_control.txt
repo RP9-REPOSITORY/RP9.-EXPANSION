@@ -1,0 +1,56 @@
+RP9 RX8 RESIDUAL VALIDATOR CONTROL LOG
+Generated: 2026-09-29T04:09:27
+Python Code ID: RX8. D
+Official Code Title: RX8. RP9 RX8 RESIDUAL VALIDATOR
+File: RX8. D.py
+Version: 1.1.0
+Output directory: F:\RP9. Vault\RP9. OFFICIAL SUBMISSION 1\RP9. RH. Z0\2. RP9. EXPANSION\C. CODE ARCHITECTURE\0. CODE 0\4. RP9. RX8\1. Python\2. OUTPUT
+Global status: PASS
+
+TEST_1 | PASS | EXAKT_RELATION_UTAN_RESIDUAL
+WHAT: Den exakta relationen 3/4 + 1/4 innan representationellt residualspar uppstar.
+HOW: Beraknar 3/4 + 1/4 med fractions.Fraction och jamfor mot exakt 1.
+WHY: For att skapa en ren referensniva dar relationen ar intakt och residualen ar exakt noll.
+RESULT: Summan blev 1 och residualen blev 0.
+
+TEST_2 | PASS | FLOAT_REPRESENTATION_LAYER
+WHAT: Flyttalsrepresentationen av 0.75 + 0.25.
+HOW: Beraknar 0.75 + 0.25 i Python float och registrerar IEEE754 hex- och bitrepresentation.
+WHY: For att visa att exakt representerbara fjardedelar fortfarande ar representation och inte ny relation.
+RESULT: Summan blev 1.0 och residualen blev 0.0.
+
+TEST_3 | PASS | VESICA_FLOAT_RESIDUAL
+WHAT: Residual som uppstar nar Vesica-relationen sqrt(3)/2 representeras och kvadreras i float.
+HOW: Beraknar ri = sqrt(3)/2 i float, kvadrerar ri och jamfor mot exakt 3/4 som float.
+WHY: For att mata skillnaden mellan den exakta referensen och den exekverade float-representationen.
+RESULT: Ratio residual blev -1.11022302462515654042e-16.
+
+TEST_4 | PASS | RESIDUALSYMMETRI_DELTA_PLUS_DELTA_MINUS
+WHAT: Residualsymmetri mellan ratio-sparet och lock-sparet.
+HOW: Beraknar delta_ratio och delta_lock och kontrollerar att delta_ratio + delta_lock = 0 inom strikt tolerans.
+WHY: For att kontrollera om de tva matta avvikelserna ar komplementara runt samma exakta referenssumma.
+RESULT: Residualsumman blev 0.00000000000000000000e+00.
+
+TEST_5 | PASS | RESIDUAL_POSITION_BY_COMPARISON
+WHAT: Residualens berakningsmassiga position mellan exakt referens och exekverad float-representation.
+HOW: Kontrollerar att referensen 3/4 forblir oforandrad och att residualen exakt motsvarar observed_float - reference_float.
+WHY: For att klassificera residualen genom beraknad differens i stallet for genom en forhandsdeklarerad origin/trace-flagga.
+RESULT: Klassificering: MEASURED_REPRESENTATION_DIFFERENCE, residual: -1.11022302462515654042e-16.
+
+TEST_6 | PASS | MASKINSPAR_FLOAT_VS_FRACTION
+WHAT: IEEE754-maskinspar genom jamforelse mellan float och Fraction.
+HOW: Jamfor exakt Fraction-referens mot exekverad float-representation och kontrollerar bada summorna samt residualparet.
+WHY: For att verifiera att den matta residualen kan sparas till skillnaden mellan tva numeriska representationsnivaer.
+RESULT: Maskinspar: True, exact closure: True, float closure: True, residual closure: True.
+
+TEST_7 | PASS | DECIMAL_KORSKONTROLL
+WHAT: Decimal representation av 3/4 och 1/4 med hog precision.
+HOW: Anvander Decimal med precision 80 och jamfor mot Fraction-referensen.
+WHY: For att kontrollera att fjardedelsproportionen inte ar beroende av float-lagret.
+RESULT: Decimal summa blev 1.00.
+
+TEST_8 | PASS | GLOBAL_RESIDUAL_INTEGRITY
+WHAT: Den kompletta sjalvstandiga residualkontrollen fran exakt referens till matbar maskindifferens.
+HOW: Sammanstaller TEST_1 till TEST_7 och kraver PASS samt de beraknade klassificerings- och maskinjamforelsekriterierna.
+WHY: For att ge validatorn ett eget globalt resultat utan beroende av andra Rx8-koder eller forhandsdeklarerade origin/trace-flaggor.
+RESULT: Misslyckade tester: 0, computed classification: True, machine comparison: True.

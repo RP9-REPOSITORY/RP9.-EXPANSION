@@ -1,0 +1,10 @@
+{
+    "AUDIT": {
+        "all_tests_include_what_how_why_result": true,
+        "residual_validation_only": true,
+        "self_contained_execution": true,
+        "external_validator_dependency": false,
+        "computed_residual_classification": "MEASURED_REPRESENTATION_DIFFERENCE",
+        "global_status": "PASS"
+    }
+}

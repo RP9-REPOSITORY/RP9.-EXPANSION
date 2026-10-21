@@ -1,0 +1,171 @@
+{
+    "TRACE": [
+        {
+            "test_id": "TEST_1",
+            "title": "EXAKT_RELATION_UTAN_RESIDUAL",
+            "vad_som_testas": "Den exakta relationen 3/4 + 1/4 innan representationellt residualspar uppstar.",
+            "hur_det_testas": "Beraknar 3/4 + 1/4 med fractions.Fraction och jamfor mot exakt 1.",
+            "varfor_det_testas": "For att skapa en ren referensniva dar relationen ar intakt och residualen ar exakt noll.",
+            "forvantat_resultat": "Summan ska vara exakt 1 och residualen ska vara exakt 0.",
+            "observerat_resultat": "Summan blev 1 och residualen blev 0.",
+            "slutresultat": "PASS",
+            "data": {
+                "ratio": "3/4",
+                "lock": "1/4",
+                "sum": "1",
+                "residual": "0",
+                "layer": "EXACT_RELATION_REFERENCE"
+            }
+        },
+        {
+            "test_id": "TEST_2",
+            "title": "FLOAT_REPRESENTATION_LAYER",
+            "vad_som_testas": "Flyttalsrepresentationen av 0.75 + 0.25.",
+            "hur_det_testas": "Beraknar 0.75 + 0.25 i Python float och registrerar IEEE754 hex- och bitrepresentation.",
+            "varfor_det_testas": "For att visa att exakt representerbara fjardedelar fortfarande ar representation och inte ny relation.",
+            "forvantat_resultat": "Summan ska vara 1.0 och residualen ska vara 0.0 i detta representationslager.",
+            "observerat_resultat": "Summan blev 1.0 och residualen blev 0.0.",
+            "slutresultat": "PASS",
+            "data": {
+                "ratio_float": 0.75,
+                "lock_float": 0.25,
+                "sum_float": 1.0,
+                "residual_float": 0.0,
+                "ratio_hex": "0x1.8000000000000p-1",
+                "lock_hex": "0x1.0000000000000p-2",
+                "sum_hex": "0x1.0000000000000p+0",
+                "ratio_bits": "0011111111101000000000000000000000000000000000000000000000000000",
+                "lock_bits": "0011111111010000000000000000000000000000000000000000000000000000",
+                "sum_bits": "0011111111110000000000000000000000000000000000000000000000000000",
+                "layer": "FLOAT_REPRESENTATION"
+            }
+        },
+        {
+            "test_id": "TEST_3",
+            "title": "VESICA_FLOAT_RESIDUAL",
+            "vad_som_testas": "Residual som uppstar nar Vesica-relationen sqrt(3)/2 representeras och kvadreras i float.",
+            "hur_det_testas": "Beraknar ri = sqrt(3)/2 i float, kvadrerar ri och jamfor mot exakt 3/4 som float.",
+            "varfor_det_testas": "For att mata skillnaden mellan den exakta referensen och den exekverade float-representationen.",
+            "forvantat_resultat": "En icke-noll skillnad ska kunna matas mellan float-resultatet och referensvardet 3/4.",
+            "observerat_resultat": "Ratio residual blev -1.11022302462515654042e-16.",
+            "slutresultat": "PASS",
+            "data": {
+                "exact_ratio": "3/4",
+                "ri_float": "8.66025403784438596588e-01",
+                "observed_ratio_float": "7.49999999999999888978e-01",
+                "expected_ratio_float": "7.50000000000000000000e-01",
+                "ratio_residual": "-1.11022302462515654042e-16",
+                "residual_detected": true,
+                "comparison_layer": "FLOAT_VS_EXACT_REFERENCE"
+            }
+        },
+        {
+            "test_id": "TEST_4",
+            "title": "RESIDUALSYMMETRI_DELTA_PLUS_DELTA_MINUS",
+            "vad_som_testas": "Residualsymmetri mellan ratio-sparet och lock-sparet.",
+            "hur_det_testas": "Beraknar delta_ratio och delta_lock och kontrollerar att delta_ratio + delta_lock = 0 inom strikt tolerans.",
+            "varfor_det_testas": "For att kontrollera om de tva matta avvikelserna ar komplementara runt samma exakta referenssumma.",
+            "forvantat_resultat": "Residualsumman ska vara 0 inom abs_tol = 1e-30.",
+            "observerat_resultat": "Residualsumman blev 0.00000000000000000000e+00.",
+            "slutresultat": "PASS",
+            "data": {
+                "ratio_residual": "-1.11022302462515654042e-16",
+                "lock_residual": "1.11022302462515654042e-16",
+                "residual_sum": "0.00000000000000000000e+00",
+                "symmetric": true,
+                "tolerance": "1e-30",
+                "comparison_layer": "COMPLEMENTARY_RESIDUAL_PAIR"
+            }
+        },
+        {
+            "test_id": "TEST_5",
+            "title": "RESIDUAL_POSITION_BY_COMPARISON",
+            "vad_som_testas": "Residualens berakningsmassiga position mellan exakt referens och exekverad float-representation.",
+            "hur_det_testas": "Kontrollerar att referensen 3/4 forblir oforandrad och att residualen exakt motsvarar observed_float - reference_float.",
+            "varfor_det_testas": "For att klassificera residualen genom beraknad differens i stallet for genom en forhandsdeklarerad origin/trace-flagga.",
+            "forvantat_resultat": "Residualen ska klassificeras som MEASURED_REPRESENTATION_DIFFERENCE.",
+            "observerat_resultat": "Klassificering: MEASURED_REPRESENTATION_DIFFERENCE, residual: -1.11022302462515654042e-16.",
+            "slutresultat": "PASS",
+            "data": {
+                "exact_reference": "3/4",
+                "reference_float": "7.50000000000000000000e-01",
+                "observed_float": "7.49999999999999888978e-01",
+                "residual": "-1.11022302462515654042e-16",
+                "reference_unchanged": true,
+                "observed_differs_from_reference": true,
+                "residual_matches_difference": true,
+                "classification": "MEASURED_REPRESENTATION_DIFFERENCE"
+            }
+        },
+        {
+            "test_id": "TEST_6",
+            "title": "MASKINSPAR_FLOAT_VS_FRACTION",
+            "vad_som_testas": "IEEE754-maskinspar genom jamforelse mellan float och Fraction.",
+            "hur_det_testas": "Jamfor exakt Fraction-referens mot exekverad float-representation och kontrollerar bada summorna samt residualparet.",
+            "varfor_det_testas": "For att verifiera att den matta residualen kan sparas till skillnaden mellan tva numeriska representationsnivaer.",
+            "forvantat_resultat": "Maskinspar ska finnas, bada summorna ska vara slutna och residualparet ska summera till 0 inom strikt tolerans.",
+            "observerat_resultat": "Maskinspar: True, exact closure: True, float closure: True, residual closure: True.",
+            "slutresultat": "PASS",
+            "data": {
+                "exact_ratio": "3/4",
+                "exact_lock": "1/4",
+                "exact_sum": "1",
+                "observed_ratio_float": "7.49999999999999888978e-01",
+                "observed_lock_float": "2.50000000000000111022e-01",
+                "ratio_residual": "-1.11022302462515654042e-16",
+                "lock_residual": "1.11022302462515654042e-16",
+                "ratio_float_hex": "0x1.7ffffffffffffp-1",
+                "lock_float_hex": "0x1.0000000000002p-2",
+                "machine_trace_exists": true,
+                "exact_reference_closed": true,
+                "float_pair_closed": true,
+                "residual_pair_closed": true
+            }
+        },
+        {
+            "test_id": "TEST_7",
+            "title": "DECIMAL_KORSKONTROLL",
+            "vad_som_testas": "Decimal representation av 3/4 och 1/4 med hog precision.",
+            "hur_det_testas": "Anvander Decimal med precision 80 och jamfor mot Fraction-referensen.",
+            "varfor_det_testas": "For att kontrollera att fjardedelsproportionen inte ar beroende av float-lagret.",
+            "forvantat_resultat": "Decimal 3/4 + 1/4 ska bli exakt 1 med vald Decimal-representation.",
+            "observerat_resultat": "Decimal summa blev 1.00.",
+            "slutresultat": "PASS",
+            "data": {
+                "decimal_precision": 80,
+                "decimal_ratio": "0.75",
+                "decimal_lock": "0.25",
+                "decimal_sum": "1.00",
+                "ratio_ok": true,
+                "lock_ok": true,
+                "total_ok": true
+            }
+        },
+        {
+            "test_id": "TEST_8",
+            "title": "GLOBAL_RESIDUAL_INTEGRITY",
+            "vad_som_testas": "Den kompletta sjalvstandiga residualkontrollen fran exakt referens till matbar maskindifferens.",
+            "hur_det_testas": "Sammanstaller TEST_1 till TEST_7 och kraver PASS samt de beraknade klassificerings- och maskinjamforelsekriterierna.",
+            "varfor_det_testas": "For att ge validatorn ett eget globalt resultat utan beroende av andra Rx8-koder eller forhandsdeklarerade origin/trace-flaggor.",
+            "forvantat_resultat": "Alla interna residualkontroller ska vara PASS och de beraknade jamforelsekriterierna ska vara uppfyllda.",
+            "observerat_resultat": "Misslyckade tester: 0, computed classification: True, machine comparison: True.",
+            "slutresultat": "PASS",
+            "data": {
+                "chain": [
+                    "EXACT_REFERENCE: Fraction(3/4) + Fraction(1/4) = 1",
+                    "FLOAT_REFERENCE: 0.75 + 0.25 = 1.0",
+                    "FLOAT_EXECUTION: sqrt(3)/2 squared is compared with 3/4",
+                    "RESIDUAL_MEASUREMENT: observed_float - reference_float",
+                    "SYMMETRY: delta_ratio + delta_lock = 0 within tolerance",
+                    "CLASSIFICATION: measured representation difference",
+                    "MACHINE_TRACE: float and Fraction comparison is reproducible",
+                    "DECIMAL_CROSSCHECK: exact quarter closure is independently reproduced"
+                ],
+                "failed_tests": [],
+                "computed_classification_ok": true,
+                "machine_comparison_ok": true,
+                "all_previous_tests_passed": true
+            }
+        }
+    ]
+}
